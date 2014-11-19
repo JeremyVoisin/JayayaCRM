@@ -22,7 +22,7 @@ module.exports = function(app, passport, carnet) {
   // ========================================================
   app.get('/messages/:idmessage/date', carnet.getDateMessage);
   
-   app.get('/messages/:idmessage/version', carnet.getMessageVersion);
+  app.get('/messages/:idmessage/version', carnet.getMessageVersion);
 
   // ========================================================
   // GET Corps d'un message

@@ -43,7 +43,7 @@ module.exports = function(app){
 	*	Route principale
 	*/
 	app.get("/",function(req, res) {
-    		res.sendfile("index.html");
+    		res.sendFile("index.html");
 	})
 	/*
 	*	Récupération du script d'inclusion

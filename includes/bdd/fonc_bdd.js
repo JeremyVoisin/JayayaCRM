@@ -458,7 +458,7 @@ exports.updateSiteWebSociete = function(req, res){
 			societe.__v++;
 			societe.site_web = req.body.site_web;
 			societe.save();
-  		    res.send(200, 200, 'Société modifiée avec succès');
+  		    res.status(200).send('Société modifiée avec succès');
 		}
 	});
 };
@@ -469,14 +469,14 @@ exports.updateCommentaireSociete = function(req, res){
 	{
 		if(err)
 		{
-		    res.send(500, " Erreur dans updateCommentaireSociete : impossible de modifier le siren de la société" + err);
+		    res.status(500).send( " Erreur dans updateCommentaireSociete : impossible de modifier le siren de la société" + err);
 		}
 		else
 		{
 			societe.__v++;
 			societe.commentaire = req.body.commentaire;
 			societe.save();
-  		    res.send(200, 200, 'Société modifiée avec succès');
+  		    res.status(200).send( 'Société modifiée avec succès');
 		}
 	});
 };
@@ -487,7 +487,7 @@ exports.updateCPSociete = function(req, res){
     {
         if(err)
         {
-            res.send(500, " Erreur dans updateCPSociete : impossible de trouver la l'adresse");
+            res.status(500).send( " Erreur dans updateCPSociete : impossible de trouver la l'adresse");
 		}
         else
 		{
@@ -495,7 +495,7 @@ exports.updateCPSociete = function(req, res){
    			{
    				if(err)
         		{
-		            res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		            res.status(500).send( " Erreur dans getSociete : impossible de trouver la l'adresse");
 				}
 				else
 				{
@@ -503,7 +503,7 @@ exports.updateCPSociete = function(req, res){
    					{
    						if(err)
         				{
-		          			res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		          			res.status(500).send(" Erreur dans getSociete : impossible de trouver la l'adresse");
 						}
 						else
 						{
@@ -511,7 +511,7 @@ exports.updateCPSociete = function(req, res){
 							societe.save();
 							ville.code_postal = req.body.code_postal;
 							ville.save();
-							res.send(200, 200, 'Société modifiée avec succès');
+							res.status(200).send( 'Société modifiée avec succès');
 	    				}
 	    			});
 	    		}
@@ -526,7 +526,7 @@ exports.updateVilleSociete = function(req, res){
     {
         if(err)
         {
-            res.send(500, " Erreur dans updateVilleSociete : impossible de trouver la l'adresse");
+            res.status(500).send(" Erreur dans updateVilleSociete : impossible de trouver la l'adresse");
 		}
         else
 		{
@@ -534,7 +534,7 @@ exports.updateVilleSociete = function(req, res){
    			{
    				if(err)
         		{
-		            res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		            res.status(500).send( " Erreur dans getSociete : impossible de trouver la l'adresse");
 				}
 				else
 				{
@@ -542,7 +542,7 @@ exports.updateVilleSociete = function(req, res){
    					{
    						if(err)
         				{
-		          			res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		          			res.status(500).send( " Erreur dans getSociete : impossible de trouver la l'adresse");
 						}
 						else
 						{
@@ -550,7 +550,7 @@ exports.updateVilleSociete = function(req, res){
 							societe.save();
 							ville.nomVille = req.body.nomVille;
 							ville.save();
-							res.send(200, 200, 'Société modifiée avec succès');
+							res.status(200).send( 'Société modifiée avec succès');
 	    				}
 	    			});
 	    		}
@@ -565,7 +565,7 @@ exports.updateNumVoieSociete = function(req, res){
     {
         if(err)
         {
-            res.send(500, " Erreur dans updateNumVoieSociete : impossible de trouver la l'adresse");
+            res.status(500).send( " Erreur dans updateNumVoieSociete : impossible de trouver la l'adresse");
 		}
         else
 		{
@@ -573,7 +573,7 @@ exports.updateNumVoieSociete = function(req, res){
    			{
    				if(err)
         		{
-		            res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		            res.status(500).send(" Erreur dans getSociete : impossible de trouver la l'adresse");
 				}
 				else
 				{
@@ -581,7 +581,7 @@ exports.updateNumVoieSociete = function(req, res){
 					societe.save();
 					adresse.num = req.body.num;
 					adresse.save();
-					res.send(200, 200, 'Société modifiée avec succès');
+					res.status(200).send('Société modifiée avec succès');
 	    		}
 	    	});
 		}
@@ -594,7 +594,7 @@ exports.updateTypeVoieSociete = function(req, res){
     {
         if(err)
         {
-            res.send(500, " Erreur dans updateTypeVoieSociete : impossible de trouver la l'adresse");
+            res.status(500).send(" Erreur dans updateTypeVoieSociete : impossible de trouver la l'adresse");
 		}
         else
 		{
@@ -602,7 +602,7 @@ exports.updateTypeVoieSociete = function(req, res){
    			{
    				if(err)
         		{
-		            res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		            res.status(500).send(" Erreur dans getSociete : impossible de trouver la l'adresse");
 				}
 				else
 				{
@@ -610,7 +610,7 @@ exports.updateTypeVoieSociete = function(req, res){
 					societe.save();
 					adresse.voie = req.body.voie;
 					adresse.save();
-					res.send(200, 200, 'Société modifiée avec succès');
+					res.status(200).send('Société modifiée avec succès');
 	    		}
 	    	});
 		}
@@ -623,7 +623,7 @@ exports.updateNomVoieSociete = function(req, res){
     {
         if(err)
         {
-            res.send(500, " Erreur dans updateNomVoieSociete : impossible de trouver la l'adresse");
+            res.status(500).send(" Erreur dans updateNomVoieSociete : impossible de trouver la l'adresse");
 		}
         else
 		{
@@ -631,7 +631,7 @@ exports.updateNomVoieSociete = function(req, res){
    			{
    				if(err)
         		{
-		            res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		            res.status(500).send(" Erreur dans getSociete : impossible de trouver la l'adresse");
 				}
 				else
 				{
@@ -639,7 +639,7 @@ exports.updateNomVoieSociete = function(req, res){
 					societe.save();
 					adresse.nomVoie = req.body.nomVoie;
 					adresse.save();
-					res.send(200, 200, 'Société modifiée avec succès');
+					res.status(200).send('Société modifiée avec succès');
 	    		}
 	    	});
 		}
@@ -652,7 +652,7 @@ exports.updatePaysSociete = function(req, res){
     {
         if(err)
         {
-            res.send(500, " Erreur dans updatePaysSociete : impossible de trouver la l'adresse");
+            res.status(500).send(" Erreur dans updatePaysSociete : impossible de trouver la l'adresse");
 		}
         else
 		{
@@ -660,7 +660,7 @@ exports.updatePaysSociete = function(req, res){
    			{
    				if(err)
         		{
-		            res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		            res.status(500).send(" Erreur dans getSociete : impossible de trouver la l'adresse");
 				}
 				else
 				{
@@ -668,7 +668,7 @@ exports.updatePaysSociete = function(req, res){
    					{
    						if(err)
         				{
-		          			res.send(500, " Erreur dans getSociete : impossible de trouver la l'adresse");
+		          			res.status(500).send(" Erreur dans getSociete : impossible de trouver la l'adresse");
 						}
 						else
 						{
@@ -676,7 +676,7 @@ exports.updatePaysSociete = function(req, res){
 							societe.save();
 							ville.pays = req.body.pays;
 							ville.save();
-							res.send(200, 200, 'Société modifiée avec succès');
+							res.status(200).send('Société modifiée avec succès');
 	    				}
 	    			});
 	    		}
@@ -700,29 +700,29 @@ exports.deleteSociete = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+            res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 		}
         else
 		{
 			// Suppression des commentaires lies a l'entreprise
 			models.noteModel.remove({'idS': entreprise._id},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+					res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 			});
 			
 			// Suppression de l'adresse de l'entreprise
 			models.adresseModel.findOne({'_id': entreprise.adresse},function(err, adresse){
 				if(err)
-					res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+					res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 				else {
 					models.villeModel.remove({'_id': adresse.ville},function(err){
 						if(err)
-							res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+							res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 					});
 					
 					models.adresseModel.remove({'_id': entreprise.adresse},function(err){
 						if(err)
-							res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+							res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 					});
 				}
 			});
@@ -730,16 +730,16 @@ exports.deleteSociete = function(req, res)
 			// Suppression de l'entreprise
 			models.societeModel.remove({'_id': entreprise._id},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+					res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 			});
 			
 			// Maj de l'id de l'entreprise des contacts liés
 			models.personneModel.update({'idS' : req.params.identreprise},{$set: {'idS': null}}, function (err) {
 				if(err)
-					res.send(500, " Erreur dans deleteSociete : impossible de supprimer l'entreprise");
+					res.status(500).send(" Erreur dans deleteSociete : impossible de supprimer l'entreprise");
 			});
 			
-			res.send(200, "Entreprise supprimée avec succès");
+			res.status(200).send("Entreprise supprimée avec succès");
 		}
     })
 
@@ -754,7 +754,7 @@ exports.deleteUtilisateur = function(req, res)
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
+		    res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
 		else{
 			// Suppression des messages lies a l'utilisateur
 			/*models.messageModel.remove({'idP': user.idP},function(err){
@@ -771,28 +771,28 @@ exports.deleteUtilisateur = function(req, res)
 			// Suppression des taches lies a l'utilisateur
 			models.tacheModel.remove({'idU': req.params.iduser},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer les taches de l'utilisateur" + err);
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer les taches de l'utilisateur" + err);
 			});
 			
 			// Suppression des participations de l'utilisateur
 			models.participationModel.remove({'_id': user.participation},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer les participations" + err);
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer les participations" + err);
 			});
  			
 			// Suppression des infos Personne de l'utilisateur
 			models.personneModel.remove({'_id': user.idP},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
 			});
 			
 			// Suppression de l'utilisateur
 			models.utilisateurModel.remove({'_id' : req.params.iduser}, function (err)
 			{
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur");
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur");
 				else
-					res.send(200, "Utilisateur supprimé avec succès");
+					res.status(200).send("Utilisateur supprimé avec succès");
 			});
   		}
 	});
@@ -806,14 +806,14 @@ exports.deleteDomaineSociete = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans deleteDomaineSociete : impossible de trouver l'entreprise");
+            res.status(500).send(" Erreur dans deleteDomaineSociete : impossible de trouver l'entreprise");
 		}
         else
 		{
 			var index = entreprise.domaine.indexOf(req.params.iddomaine);
 			if(index > -1) entreprise.domaine.splice(index,1);
 			entreprise.save();
-  		    res.send(200, 200, 'Domaine supprimé avec succès');
+  		    res.status(200).send('Domaine supprimé avec succès');
 		}
     });
 
@@ -844,11 +844,11 @@ exports.postDomaine = function(req, res)
     {
         if (err)
         {
-            res.send(500, " Erreur dans postDomaine : impossible d'ajouter le nouveau domaine" + err);
+            res.status(500).send(" Erreur dans postDomaine : impossible d'ajouter le nouveau domaine" + err);
         }
 		else
 		{
-        	res.send(200, "Domaine ajouté avec succès !");
+        	res.status(200).send("Domaine ajouté avec succès !");
 		}
     });
 };
@@ -865,11 +865,11 @@ exports.getDomaines = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getDomaine : impossible de trouver le domaine");
+            res.status(500).send(" Erreur dans getDomaine : impossible de trouver le domaine");
 	}
         else
 	{
-	    res.send(200, domaines);
+	    res.status(200).send(domaines);
 	}
     });
 };
@@ -884,11 +884,11 @@ exports.getDomaine = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getDomaine : impossible de trouver le domaine");
+            res.status(500).send(" Erreur dans getDomaine : impossible de trouver le domaine");
 	}
         else
 	{
-	    res.send(200, domaine);
+	    res.status(200).send(domaine);
 	}
     });
 };
@@ -901,14 +901,14 @@ exports.updateNomDomaine = function(req, res){
 	{
 		if(err)
 		{
-		    res.send(500, " Erreur dans updateNomDomaine : impossible de modifier le nom du domaine " + err);
+		    res.status(500).send(" Erreur dans updateNomDomaine : impossible de modifier le nom du domaine " + err);
 		}
 		else
 		{
 			domaine.__v++;
 			domaine.nom = req.body.nom;
 			domaine.save();
-  		    res.send(200, 200, 'Domaine modifié avec succès');
+  		    res.status(200).send('Domaine modifié avec succès');
 		}
 	});
 };
@@ -925,11 +925,11 @@ exports.deleteDomaine = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans deleteDomaine : impossible de supprimer le domaine");
+            res.status(500).send(" Erreur dans deleteDomaine : impossible de supprimer le domaine");
 		}
         else
 		{
-			res.send(200, "Domaine supprimé avec succès");
+			res.status(200).send("Domaine supprimé avec succès");
 		}
     });
 };
@@ -947,11 +947,11 @@ exports.getMessages = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getMessages : impossible de trouver la liste des messages");
+            res.status(500).send(" Erreur dans getMessages : impossible de trouver la liste des messages");
 		}
         else
 		{
-		    res.send(200, messages);
+		    res.status(200).send(messages);
 		}
     });
 };
@@ -974,11 +974,11 @@ exports.postMessage = function(req, res)
     nouveauMessage.corpsMsg = req.body.corpsMsg;
     
     models.utilisateurModel.findOne({'_id': req.user._id},function(err,user){
-    	if(err)res.send(500,"Erreur dans la mise a jour du participant");
+    	if(err)res.status(500).send("Erreur dans la mise a jour du participant");
     	else{
     		models.participationModel.update({'_id': user.participation},{$addToSet: {idB: mongoose.Types.ObjectId(req.body.idB)}},function(err){
     			if(err){
-    				res.send(500,err);
+    				res.status(500).send(err);
     			}
     		});
     	}
@@ -986,12 +986,12 @@ exports.postMessage = function(req, res)
     
     models.billetModel.findOne({'_id': req.body.idB},function(err,billet){
     	if(err){
-    		res.send(500,"Erreur dans la mise a jour du billet");
+    		res.status(500).send("Erreur dans la mise a jour du billet");
     	}
     	else{
 			billet.__v++;
 			billet.save(function(err){
-				if(err) res.send(500,"Erreur dans la mise a jour du billet");
+				if(err) res.status(500).send("Erreur dans la mise a jour du billet");
 			});
     	}
     });
@@ -1001,11 +1001,11 @@ exports.postMessage = function(req, res)
     {
         if (err)
         {
-            res.send(500, " Erreur dans postMessage : impossible d'ajouter le nouveau message");
+            res.status(500).send(" Erreur dans postMessage : impossible d'ajouter le nouveau message");
         }
 		else
 		{
-        	res.send(200, "Message ajouté avec succès !");
+        	res.status(200).send("Message ajouté avec succès !");
 		}
     });
 };
@@ -1023,11 +1023,11 @@ exports.getAuteurMessage = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getAuteurMessage : impossible de trouver l'auteur du message");
+            res.status(500).send(" Erreur dans getAuteurMessage : impossible de trouver l'auteur du message");
 	}
         else
 	{
-	    res.send(200, auteur);
+	    res.status(200).send(auteur);
 	}
     });
 };
@@ -1038,11 +1038,11 @@ exports.getMessageVersion = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans l'obtention de la version d'un message");
+            res.status(500).send(" Erreur dans l'obtention de la version d'un message");
 		}
         else
 		{
-		    res.send(200, message);
+		    res.status(200).send(message);
 		}
     });
 };
@@ -1057,11 +1057,11 @@ exports.getDateMessage = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getDateMessage : impossible de trouver la date du message");
+            res.status(500).send(" Erreur dans getDateMessage : impossible de trouver la date du message");
 	}
         else
 	{
-	    res.send(200, date);
+	    res.status(200).send(date);
 	}
     });
 };
@@ -1076,11 +1076,11 @@ exports.getCorpsMessage = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getCorpsMessage : impossible de trouver le corps du message");
+            res.status(500).send(" Erreur dans getCorpsMessage : impossible de trouver le corps du message");
 	}
         else
 	{
-	    res.send(200, corpsmsg);
+	    res.status(200).send(corpsmsg);
 	}
     });
 };
@@ -1098,11 +1098,11 @@ exports.deleteMessage = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans deleteMessage : impossible de supprimer le message");
+            res.status(500).send(" Erreur dans deleteMessage : impossible de supprimer le message");
 	}
         else
 	{
-	    res.send(200, "Message supprimé avec succès");
+	    res.status(200).send("Message supprimé avec succès");
 	}
     });
 };
@@ -1146,11 +1146,11 @@ exports.postTache = function(req, res)
     {
         if (err)
         {
-            res.send(500, " Erreur dans postTache : impossible d'ajouter la nouvelle tache" + err);
+            res.status(500).send(" Erreur dans postTache : impossible d'ajouter la nouvelle tache" + err);
         }
 	
 		{
-			res.send(200, "Tache ajoutée avec succès !");
+			res.status(200).send("Tache ajoutée avec succès !");
 		}
     });
 };
@@ -1165,11 +1165,11 @@ exports.getTaches = function(req, res)
     models.tacheModel.find({'idU': req.user._id}).sort({date: 'asc'}).exec(function(err,taches){
 		if(err)
         {
-            res.send(500, " Erreur dans getTaches : impossible de trouver la liste des taches");
+            res.status(500).send(" Erreur dans getTaches : impossible de trouver la liste des taches");
 		}
         else
 		{
-	    	res.send(200, taches);
+	    	res.status(200).send(taches);
 		}
 	});
 };
@@ -1184,11 +1184,11 @@ exports.getTache = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getBillet : impossible de trouver le billet");
+            res.status(500).send(" Erreur dans getBillet : impossible de trouver le billet");
 		}
         else
 		{
-			res.send(200, tache);
+			res.status(200).send(tache);
 		}
     });
 };
@@ -1200,12 +1200,12 @@ exports.updateTitreTache = function(req, res){
 	models.tacheModel.findOne({'_id':req.params.idtache}, function (err, tache)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateTitreTache : impossible de modifier le titre de la tache" + err);
+		    res.status(500).send(" Erreur dans updateTitreTache : impossible de modifier le titre de la tache" + err);
 		else{
 			tache.__v ++;
 			tache.titre = req.body.titre;
 			tache.save();
-  		    res.send(200, 200, 'Tache modifiée avec succès');
+  		    res.status(200).send('Tache modifiée avec succès');
   		}
 	});
 };
@@ -1213,9 +1213,9 @@ exports.updateTitreTache = function(req, res){
 exports.getTacheVersion = function(req,res){
 	models.tacheModel.find({'_id': req.params.idtache}, {__v:1}, function(err, tache){
 		if(err){
-			res.send(500,"Erreur dans l'obtention de la version d'une tache");
+			res.status(500).send("Erreur dans l'obtention de la version d'une tache");
 		}
-		else res.send(200, tache);
+		else res.status(200).send(tache);
 	});
 };
 
@@ -1224,12 +1224,12 @@ exports.updateLieuTache = function(req, res){
 	models.tacheModel.findOne({'_id':req.params.idtache}, function (err,tache)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateLieuTache : impossible de modifier le lieu de la tache" + err);
+		    res.status(500).send(" Erreur dans updateLieuTache : impossible de modifier le lieu de la tache" + err);
 		else{
 			tache.__v ++;
 			tache.lieu = req.body.lieu;
 			tache.save();
-  		    res.send(200, 200, 'Tache modifiée avec succès');
+  		    res.status(200).send('Tache modifiée avec succès');
   		}
 	});
 };
@@ -1239,12 +1239,12 @@ exports.updateDateTache = function(req, res){
 	models.tacheModel.findOne({'_id':req.params.idtache}, function (err,tache)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateDateTache : impossible de modifier la date de la tache" + err);
+		    res.status(500).send(" Erreur dans updateDateTache : impossible de modifier la date de la tache" + err);
 		else{
 			tache.__v ++;
 			tache.date = req.body.date;
 			tache.save();
-  		    res.send(200, 200, 'Tache modifiée avec succès');
+  		    res.status(200).send('Tache modifiée avec succès');
   		}
 	});
 };
@@ -1254,12 +1254,12 @@ exports.updateHeureTache = function(req, res){
 	models.tacheModel.findOne({'_id':req.params.idtache}, function (err)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateHeureTache : impossible de modifier l'heure de la tache" + err);
+		    res.status(500).send(" Erreur dans updateHeureTache : impossible de modifier l'heure de la tache" + err);
 		else{	
 			tache.__v ++;
 			tache.heure = req.body.heure;
 			tache.save();
-  		    res.send(200, 200, 'Tache modifiée avec succès');
+  		    res.status(200).send('Tache modifiée avec succès');
   		}
 	});
 };
@@ -1269,12 +1269,12 @@ exports.updateDescriptionTache = function(req, res){
 	models.tacheModel.findOne({'_id':req.params.idtache}, function (err,tache)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateDescriptionTache : impossible de modifier la description de la tache" + err);
+		    res.status(500).send(" Erreur dans updateDescriptionTache : impossible de modifier la description de la tache" + err);
 		else{
 			tache.__v ++;
 			tache.description = req.body.description;
 			tache.save();
-  		    res.send(200, 200, 'Tache modifiée avec succès');
+  		    res.status(200).send('Tache modifiée avec succès');
   		 }
 	});
 };
@@ -1291,11 +1291,11 @@ exports.deleteTache = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans deleteTache : impossible de supprimer la tache");
+            res.status(500).send(" Erreur dans deleteTache : impossible de supprimer la tache");
 		}
         else
 		{
-			res.send(200, "Tache supprimée avec succès");
+			res.status(200).send("Tache supprimée avec succès");
 		}
     })
 };
@@ -1333,19 +1333,19 @@ exports.postPersonne = function(req, res)
     {
         if (err)
         {
-            res.send(500, " Erreur dans postPersonne : impossible d'ajouter la nouvelle personne" + err);
+            res.status(500).send(" Erreur dans postPersonne : impossible d'ajouter la nouvelle personne" + err);
         }
 	
 		{
-        	res.send(200, "Personne ajoutée avec succès !");
+        	res.status(200).send("Personne ajoutée avec succès !");
 		}
     });
 };
 
 exports.getPersonneVersion = function(req,res){
 	models.personneModel.find({'_id': req.params.idpersonne},{__v:1},function(err,personne){
-		if(err)res.send(500,"Erreur dans l'obtention de la version d'une personne");
-		else res.send(200,personne);
+		if(err)res.status(500).send("Erreur dans l'obtention de la version d'une personne");
+		else res.status(200).send(personne);
 	});
 };
 
@@ -1362,11 +1362,11 @@ exports.getPersonnes = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getPersonnes : impossible de trouver la liste des personnes");
+            res.status(500).send(" Erreur dans getPersonnes : impossible de trouver la liste des personnes");
 	}
         else
 	{
-	    res.send(200, personnes);
+	    res.status(200).send(personnes);
 	}
     });
 };
@@ -1381,11 +1381,11 @@ exports.getPersonne = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getPersonne : impossible de trouver la personne");
+            res.status(500).send(" Erreur dans getPersonne : impossible de trouver la personne");
 	}
         else
 	{
-	    res.send(200, personne);
+	    res.status(200).send(personne);
 	}
     });
 };
@@ -1397,12 +1397,12 @@ exports.updateStatutPersonne = function(req, res){
 	models.personneModel.findOne({'_id':req.params.idpersonne}, function (err, personne)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateStatutPersonne : impossible de modifier le statut de la personne" + err);
+		    res.status(500).send(" Erreur dans updateStatutPersonne : impossible de modifier le statut de la personne" + err);
 		else{
 			personne.__v ++;
 			personne.statut = req.body.statut;
 			personne.save();
-  		    res.send(200, 200, 'Personne modifiée avec succès');
+  		    res.status(200).send('Personne modifiée avec succès');
   		}
 	});
 };
@@ -1412,12 +1412,12 @@ exports.updateTelPersonne = function(req, res){
 	models.personneModel.findOne({'_id':req.params.idpersonne}, function (err, personne)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateTelPersonne : impossible de modifier le tel de la personne" + err);
+		    res.status(500).send(" Erreur dans updateTelPersonne : impossible de modifier le tel de la personne" + err);
 		else{
 			personne.__v ++;
 			personne.tel = req.body.tel;
 			personne.save();
-  		    res.send(200, 200, 'Personne modifiée avec succès');
+  		    res.status(200).send('Personne modifiée avec succès');
   		}
 	});
 };
@@ -1427,12 +1427,12 @@ exports.updateFaxPersonne = function(req, res){
 	models.personneModel.findOne({'_id':req.params.idpersonne}, function (err, personne)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateFaxPersonne : impossible de modifier le fax de la personne" + err);
+		    res.status(500).send(" Erreur dans updateFaxPersonne : impossible de modifier le fax de la personne" + err);
 		else{
 			personne.__v ++;
 			personne.fax = req.body.fax;
 			personne.save();
-  		    res.send(200, 200, 'Personne modifiée avec succès');
+  		    res.status(200).send('Personne modifiée avec succès');
   		}
 	});
 };
@@ -1442,12 +1442,12 @@ exports.updateMailPersonne = function(req, res){
 	models.personneModel.findOne({'_id':req.params.idpersonne}, function (err, personne)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateMailPersonne : impossible de modifier le mail de la personne" + err);
+		    res.status(500).send(" Erreur dans updateMailPersonne : impossible de modifier le mail de la personne" + err);
 		else{
 			personne.__v ++;
 			personne.mail = req.body.mail;
 			personne.save();
-  		    res.send(200, 200, 'Personne modifiée avec succès');
+  		    res.status(200).send('Personne modifiée avec succès');
   		}
 	});
 };
@@ -1457,12 +1457,12 @@ exports.updateCommentairePersonne = function(req, res){
 	models.personneModel.findOne({'_id':req.params.idpersonne}, function (err, personne)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateCommentairePersonne : impossible de modifier le commentaire de la personne" + err);
+		    res.status(500).send(" Erreur dans updateCommentairePersonne : impossible de modifier le commentaire de la personne" + err);
 		else{
 			personne.__v ++;
 			personne.commentaire = req.body.commentaire;
 			personne.save();
-  		    res.send(200, 200, 'Personne modifiée avec succès');
+  		    res.status(200).send('Personne modifiée avec succès');
   		}
 	});
 };
@@ -1479,11 +1479,11 @@ exports.deletePersonne = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans deletePersonne : impossible de supprimer la personne");
+            res.status(500).send(" Erreur dans deletePersonne : impossible de supprimer la personne");
 	}
         else
 	{
-	    res.send(200, "Personne supprimée avec succès");
+	    res.status(200).send("Personne supprimée avec succès");
 	}
     });
 };
@@ -1511,11 +1511,11 @@ exports.postBillet = function(req, res)
     {
         if (err)
         {
-            res.send(500, " Erreur dans postBillet : impossible d'ajouter le nouveau billet" + err);
+            res.status(500).send(" Erreur dans postBillet : impossible d'ajouter le nouveau billet" + err);
         }
 		else
 		{
-        	res.send(200, "Billet ajouté avec succès !");
+        	res.status(200).send("Billet ajouté avec succès !");
 		}
     });
 };
@@ -1533,11 +1533,11 @@ exports.getBillets = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getBillets : impossible de trouver la liste des billets");
+            res.status(500).send(" Erreur dans getBillets : impossible de trouver la liste des billets");
 		}
         else
 		{
-		    res.send(200, billets);
+		    res.status(200).send(billets);
 		}
     });
 };
@@ -1545,9 +1545,9 @@ exports.getBillets = function(req, res)
 exports.getBilletVersion = function(req,res){
 	models.billetModel.find({'_id': req.params.idbillet},{__v:1},function(err,billet){
 		if(err){
-			res.send(500,"Erreur dans l'obtention de la version d'un billet");
+			res.status(500).send("Erreur dans l'obtention de la version d'un billet");
 		}
-		else res.send(200,billet);
+		else res.status(200).send(billet);
 	});
 };
 
@@ -1558,9 +1558,9 @@ exports.getBilletVersion = function(req,res){
 exports.getBilletsPersonne = function(req, res)
 {
     models.participationModel.find({'_id': req.user.participation},function(err,participation){
-    	if(err)res.send(500,err);
+    	if(err)res.status(500).send(err);
     	else{
-    		res.send(200,participation);
+    		res.status(200).send(participation);
     	}
     });
 };
@@ -1572,9 +1572,9 @@ exports.getBilletsPersonne = function(req, res)
 exports.getBilletParticipants = function(req, res)
 {
     models.messageModel.distinct('idP',{'idB': req.params.idbillet}).exec(function(err,participants){
-    	if(err)res.send(500,err);
+    	if(err)res.status(500).send(err);
     	else{
-    		res.send(200,participants);
+    		res.status(200).send(participants);
     	}
     });
 };
@@ -1590,11 +1590,11 @@ exports.getBillet = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getBillet : impossible de trouver le billet");
+            res.status(500).send(" Erreur dans getBillet : impossible de trouver le billet");
 		}
         else
 		{
-	    	res.send(200, billet);
+	    	res.status(200).send(billet);
 		}
     });
 };
@@ -1609,11 +1609,11 @@ exports.getBilletMessages = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getBilletMessages : impossible de trouver les messages");
+            res.status(500).send(" Erreur dans getBilletMessages : impossible de trouver les messages");
 		}
         else
 		{
-	    	res.send(200, messages);
+	    	res.status(200).send(messages);
 		}
     });
 };
@@ -1628,11 +1628,11 @@ exports.getBilletMessageCount = function(req, res)
     {
         if(err)
         {
-            res.send(500, " Erreur dans getBilletMessages : impossible de trouver les messages");
+            res.status(500).send(" Erreur dans getBilletMessages : impossible de trouver les messages");
 		}
         else
 		{
-	    	res.send(200, messages.length);
+	    	res.status(200).send(messages.length);
 		}
     });
 };
@@ -1666,9 +1666,9 @@ exports.deleteBillet = function(req, res)
     });
 	
 	if(good1 && good2)
-		res.send(200, "Suppression effectuée avec succès");
+		res.status(200).send("Suppression effectuée avec succès");
 	else
-		res.send(500, "Erreur dans la suppression du billet");
+		res.status(500).send("Erreur dans la suppression du billet");
 };
 
 exports.createUtilisateur = function(req,res){
@@ -1694,7 +1694,7 @@ exports.createUtilisateur = function(req,res){
 	
 	nouvellePersonne.save(function(err, personne){
 		if(err){
-			res.send(500,"Erreur lors de la création de la personne liée à l'utilisateur");
+			res.status(500).send("Erreur lors de la création de la personne liée à l'utilisateur");
 			models.participationModel.remove({'_id' : participation._id});
 			return;
 		}
@@ -1708,13 +1708,13 @@ exports.createUtilisateur = function(req,res){
 	
 	nouvelUtilisateur.save(function(err){
 		if(err){
-			res.send(500, "Impossible de créer le nouvel utilisateur");
+			res.status(500).send("Impossible de créer le nouvel utilisateur");
 			models.participationModel.remove({'_id' : participation._id});
 			models.personneModel.remove({'_id' : nouvellePersonne._id});
 			return;
 		}
 		else{
-			res.send(200, "Ajout réalisé avec succès");
+			res.status(200).send("Ajout réalisé avec succès");
 		}
 	});
 };
@@ -1724,12 +1724,12 @@ exports.updateLoginUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateLoginUtilisateur : impossible de modifier le login de l'utilisateur" + err);
+		    res.status(500).send(" Erreur dans updateLoginUtilisateur : impossible de modifier le login de l'utilisateur" + err);
 		else{
 			user.__v ++;
 			user.login = req.body.login;
 			user.save();
-  		    res.send(200, 200, 'Utilisateur modifiée avec succès');
+  		    res.status(200).send('Utilisateur modifiée avec succès');
   		}
 	});
 };
@@ -1739,14 +1739,14 @@ exports.updateNomUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateNomUtilisateur : impossible de modifier le nom de l'utilisateur" + err);
+		    res.status(500).send(" Erreur dans updateNomUtilisateur : impossible de modifier le nom de l'utilisateur" + err);
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				user.__v ++;
 				user.save();
 				personne.nom = req.body.nom;
 				personne.save();
-				res.send(200, 200, 'Utilisateur modifié avec succès');
+				res.status(200).send('Utilisateur modifié avec succès');
 			});
   		}
 	});
@@ -1757,14 +1757,14 @@ exports.updatePrenomUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updatePrenomUtilisateur : impossible de modifier le prenom d'un utilisateur" + err);
+		    res.status(500).send(" Erreur dans updatePrenomUtilisateur : impossible de modifier le prenom d'un utilisateur" + err);
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				user.__v ++;
 				user.save();
 				personne.prenom = req.body.prenom;
 				personne.save();
-				res.send(200, 200, 'Utilisateur modifié avec succès');
+				res.status(200).send('Utilisateur modifié avec succès');
 			});
   		}
 	});
@@ -1775,14 +1775,14 @@ exports.updateStatutUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateStatutUtilisateur : impossible de modifier le statut d'un utilisateur" + err);
+		    res.status(500).send(" Erreur dans updateStatutUtilisateur : impossible de modifier le statut d'un utilisateur" + err);
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				user.__v ++;
 				user.save();
 				personne.statut = req.body.statut;
 				personne.save();
-				res.send(200, 200, 'Utilisateur modifié avec succès');
+				res.status(200).send('Utilisateur modifié avec succès');
 			});
   		}
 	});
@@ -1793,14 +1793,14 @@ exports.updateTelUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateTelUtilisateur : impossible de modifier le telephone d'un utilisateur" + err);
+		    res.status(500).send(" Erreur dans updateTelUtilisateur : impossible de modifier le telephone d'un utilisateur" + err);
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				user.__v ++;
 				user.save();
 				personne.tel = req.body.tel;
 				personne.save();
-				res.send(200, 200, 'Utilisateur modifié avec succès');
+				res.status(200).send('Utilisateur modifié avec succès');
 			});
   		}
 	});
@@ -1811,14 +1811,14 @@ exports.updateFaxUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateFaxUtilisateur : impossible de modifier le fax d'un utilisateur" + err);
+		    res.status(500).send(" Erreur dans updateFaxUtilisateur : impossible de modifier le fax d'un utilisateur" + err);
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				user.__v ++;
 				user.save();
 				personne.fax = req.body.fax;
 				personne.save();
-				res.send(200, 200, 'Utilisateur modifié avec succès');
+				res.status(200).send('Utilisateur modifié avec succès');
 			});
   		}
 	});
@@ -1829,14 +1829,14 @@ exports.updateMailUtilisateur = function(req, res){
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans updateMailUtilisateur : impossible de modifier le mail d'un utilisateur" + err);
+		    res.status(500).send(" Erreur dans updateMailUtilisateur : impossible de modifier le mail d'un utilisateur" + err);
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				user.__v ++;
 				user.save();
 				personne.mail = req.body.mail;
 				personne.save();
-				res.send(200, 200, 'Utilisateur modifié avec succès');
+				res.status(200).send('Utilisateur modifié avec succès');
 			});
   		}
 	});
@@ -1845,21 +1845,21 @@ exports.updateMailUtilisateur = function(req, res){
 exports.getUtilisateurs = function(req,res){
 	models.utilisateurModel.find({},function(err,users){
 		if(err){
-			res.send(500,"Erreur dans l'obtention de la liste des utilisateurs");
+			res.status(500).send("Erreur dans l'obtention de la liste des utilisateurs");
 		}
-		else res.send(200,users);
+		else res.status(200).send(users);
 	});
 };
 
 exports.getUtilisateur = function(req,res){
 	models.utilisateurModel.findOne({'_id': req.params.idutilisateur},{login:1,degree:1,idP:1},function(err,user){
 		if(err){
-			res.send(500,"Erreur dans l'obtention de l'utilisateurs");
+			res.status(500).send("Erreur dans l'obtention de l'utilisateurs");
 		}
 		else{
 			models.personneModel.findOne({'_id': user.idP},function(err,personne){
 				var _user = {user: user, personne: personne};
-				res.send(200,_user);
+				res.status(200).send(_user);
 			});
 		}
 	});
@@ -1868,18 +1868,18 @@ exports.getUtilisateur = function(req,res){
 exports.getUtilisateurVersion = function(req,res){
 	models.utilisateurModel.find({'_id':req.params.idutilisateur},{__v: 1},function(err,users){
 		if(err){
-			res.send(500,"Erreur dans l'obtention de la version de l'utilisateur");
+			res.status(500).send("Erreur dans l'obtention de la version de l'utilisateur");
 		}
-		else res.send(200,users);
+		else res.status(200).send(users);
 	});
 };
 
 exports.getUtilisateursDegree = function(req,res){
 	models.utilisateurModel.find({'degree': "0"},function(err,users){
 		if(err){
-			res.send(500,"Erreur dans l'obtention des admin '0'");
+			res.status(500).send("Erreur dans l'obtention des admin '0'");
 		}
-		else res.send(200,users);
+		else res.status(200).send(users);
 	});
 };
 
@@ -1892,7 +1892,7 @@ exports.deleteUtilisateur = function(req, res)
 	models.utilisateurModel.findOne({'_id':req.params.iduser}, function (err, user)
 	{
 		if(err)
-		    res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
+		    res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
 		else{
 			// Suppression des messages lies a l'utilisateur
 			/*models.messageModel.remove({'idP': user.idP},function(err){
@@ -1909,28 +1909,28 @@ exports.deleteUtilisateur = function(req, res)
 			// Suppression des taches lies a l'utilisateur
 			models.tacheModel.remove({'idU': req.params.iduser},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer les taches de l'utilisateur" + err);
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer les taches de l'utilisateur" + err);
 			});
 			
 			// Suppression des participations de l'utilisateur
 			models.participationModel.remove({'_id': user.participation},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer les participations" + err);
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer les participations" + err);
 			});
  			
 			// Suppression des infos Personne de l'utilisateur
 			models.personneModel.remove({'_id': user.idP},function(err){
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur" + err);
 			});
 			
 			// Suppression de l'utilisateur
 			models.utilisateurModel.remove({'_id' : req.params.iduser}, function (err)
 			{
 				if(err)
-					res.send(500, " Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur");
+					res.status(500).send(" Erreur dans deleteUtilisateur : impossible de supprimer l'utilisateur");
 				else
-					res.send(200, "Utilisateur supprimé avec succès");
+					res.status(200).send("Utilisateur supprimé avec succès");
 			});
   		}
 	});

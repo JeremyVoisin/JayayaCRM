@@ -1,4 +1,4 @@
-LanguageList = DatasBuffer.getRequest('js/Internationalization/languageList.json');
+LanguageList = DatasBuffer.getRequest('Lang/languageList.json');
 
 var internationalizationDictionary = null;
 var selectedLanguage = getURLParameter("lang");
@@ -12,10 +12,6 @@ function _(word){
 
 function loadLanguage(){
 	if(internationalizationDictionary==null){
-		internationalizationDictionary = DatasBuffer.getRequest('js/Internationalization/'+lang.fileName);
+		internationalizationDictionary = DatasBuffer.getRequest('Lang/'+lang.fileName);
 	}
-}
-
-function setLanguage(lang){
-	
 }
