@@ -56,7 +56,12 @@ JayayaCRM embarque également un système de gestion des tâches propres à chaq
 
 <p>JayayaCRM est une Single Page Application (SPA) fonctionnant avec un serveur <a href="http://nodejs.org/">NodeJS</a> et une base de données <a href="http://www.mongodb.org/">MongoDB</a>. Il est donc nécessaire d'installer ces deux applications avant de pouvoir démarrer.</p>
 
-<p>Une fois ces premiers éléments installés, un script a été conçu pour créer les modèles de la base de données. Afin d'utiliser ce script, veuillez vérifier au préalable que le démon mongod est actif puis placez vous dans le répertoire JayayaCRM (via un terminal ayant accès à NodeJS), puis exécutez la commande suivante:</p>
+<p>Une fois ces premiers éléments installés, les modules NodeJS doivent être installés, les dépendances sont inscrites dans package.json, c'est pourquoi, il suffit d'exécuter la commande suivante pour les installer:</p>
+
+<pre><code>npm install
+</code></pre>
+
+<p>Ensuite, un script a été conçu pour créer les modèles de la base de données. Afin d'utiliser ce script, veuillez vérifier au préalable que le démon mongod est actif puis placez vous dans le répertoire JayayaCRM (via un terminal ayant accès à NodeJS), puis exécutez la commande suivante:</p>
 
 <pre><code>node includes/bdd/creation_bdd.js
 </code></pre>
