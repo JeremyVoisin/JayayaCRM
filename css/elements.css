@@ -25,6 +25,9 @@
 
 /* Element Navigateur -> <ul class="navigateur">
    ========================================================================== */
+.navigateur{
+	margin-bottom:10px;
+}
 
 .navigateur li {
 	font-family: 'BebasNeueRegular', Arial, sans-serif;
