@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="JayayaCRM : Une application de Customer Relationship Management incluant des fonctionnalité de support pour d&#39;éventuels clients grâce à un système de billets.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>JayayaCRM</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JeremyVoisin/JayayaCRM">View on GitHub</a>
+
+          <h1 id="project_title">JayayaCRM</h1>
+          <h2 id="project_tagline">Une application de Customer Relationship Management incluant des fonctionnalité de support pour d&#39;éventuels clients grâce à un système de billets.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/JeremyVoisin/JayayaCRM/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/JeremyVoisin/JayayaCRM/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="jayayacrm" class="anchor" href="#jayayacrm" aria-hidden="true"><span class="octicon octicon-link"></span></a>JayayaCRM</h3>
+
+<p>JayayaCRM est une application de Customer Relationship Management qui consiste donc à regrouper, pour une entreprise, une ensemble de contacts de type entreprise ou de type humain. Chaque contact humain pouvant ou non être associé à une entreprise.
+JayayaCRM embarque également un système de gestion des tâches propres à chaque utilisateur.</p>
+
+<p>Ce qu'offre JayayaCRM par rapport à une application de CRM classique est l'accès à un espace de "discussion" basé sur un système de billets consultables par toute personne ayant un compte sur le CRM. Cette fonctionnalité permet d'assurer un service après vente ou un support lorsque les clients rencontrent des problèmes. Aussi, afin que chaque utilisateur puisse s'y retrouver, il peut avoir accès, soit aux conversations auxquelles il a participé, soit à toutes les conversations qui ont été créées afin d'éviter d'avoir à poser une question si son problème a déjà été rencontré par quelqu'un d'autre.</p>
+
+<h3>
+<a id="jayayafront" class="anchor" href="#jayayafront" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jayaya.Front</h3>
+
+<p>Jayaya.Front est le framework javascript utilisé pour réaliser le rendu de l'application JayayaCRM. Ce framework est basé sur un système de layout manager qui découpe des conteneurs en sous conteneurs eux même capable de contenir soit des éléments graphiques, soit de nouveaux sous conteneurs. La communication entre les éléments graphiques créés par Jayaya.Front est assuré par une implémentation du pattern <a href="https://jeyz.fr/design-pattern-coupleur/">Coupleur</a> qui consiste à propager, selon des relations prédéfinies entre les éléments graphiques, les événements utilisateurs a tous les éléments inteconnectés.</p>
+
+<h3>
+<a id="auteurs" class="anchor" href="#auteurs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Auteurs</h3>
+
+<p>Le CRM Jayaya a été réalisé par cinq étudiants de l'Université du Maine au Mans (<a href="https://github.com/JeremyVoisin" class="user-mention">@JeremyVoisin</a>, Adrien Froger, Alexis Carpentier, Yohan Dardé et Yannis Vessereau). Ce CRM est basé sur le framework de gestion de disposition de contenu Jayaya.Front créé par <a href="https://github.com/JeremyVoisin" class="user-mention">@JeremyVoisin</a> à l'occasion de la réalisation du CRM.</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>JayayaCRM est une Single Page Application (SPA) fonctionnant avec un serveur <a href="http://nodejs.org/">NodeJS</a> et une base de données <a href="http://www.mongodb.org/">MongoDB</a>. Il est donc nécessaire d'installer ces deux applications avant de pouvoir démarrer.</p>
+
+<p>Une fois ces premiers éléments installés, un script a été conçu pour créer les modèles de la base de données. Afin d'utiliser ce script, veuillez vérifier au préalable que le démon mongod est actif puis placez vous dans le répertoire JayayaCRM (via un terminal ayant accès à NodeJS), puis exécutez la commande suivante:</p>
+
+<pre><code>node includes/bdd/creation_bdd.js
+</code></pre>
+
+<p>Une fois la création des modèles terminée, l'application est prête a être lancée, pour cela, lancer la commande:</p>
+
+<pre><code>node Server.js
+</code></pre>
+
+<p>De base, le serveur écoutera sur le port 8080 et vous accéderez donc au CRM via <a href="http://localhost:8080">http://localhost:8080</a>, si votre application est hébergée en local ou via http://:8080.</p>
+
+<h3>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h3>
+
+<p>Un problème ou une question à propos de JayayaCRM ou de Jayaya.Front? Envoyez votre question à <a href="mailto:jeremy.voisin@jeyz.fr">jeremy.voisin@jeyz.fr</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">JayayaCRM maintained by <a href="https://github.com/JeremyVoisin">JeremyVoisin</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
