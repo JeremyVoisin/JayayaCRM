@@ -1,0 +1,6 @@
+{
+	"lang":{
+		"fr_FR" : {"langName" : "Français", "fileName" : "fr.json"},
+		"en_EN" : {"langName" : "English", "fileName" : "en.json"}
+	}
+}

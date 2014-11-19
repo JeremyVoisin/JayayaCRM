@@ -1,0 +1,62 @@
+/**
+ * @Project: JAYAYA CRM
+ * @Author: Equipe JAYAYA
+ * @Description: Feuille de style definissant le style de l'onglet coordonnees de l'onglet principal Clients
+ * @version: 1.0
+ */
+ 
+ 
+ 
+/* Style du corps
+   ========================================================================== */
+   
+.content_clients_coordonnees .content_liste_coord_entrep {
+	padding: 10px 0px;
+}
+.content_clients_coordonnees .content_liste_coord_entrep li {
+	cursor: default;
+}
+.content_clients_coordonnees .content_liste_coord_entrep li.active_item {
+	border-left: none;
+}
+.content_clients_coordonnees .content_liste_coord_entrep .gras_champs_contact {
+	font-weight: bold;
+	color: #4AB1D3;
+}
+
+
+
+/* Bloc Boutons Options
+   ========================================================================== */
+   
+.content_clients_coordonnees .content_options_clients_coord {
+	border-top: 1px solid #E0E0E0;
+	margin-top: 10px;
+}
+.content_clients_coordonnees .content_options_clients_coord ul {
+	margin: 10px;
+}
+.content_clients_coordonnees .content_options_clients_coord #sup_entreprise {
+	background:url('../img/sup.png') 0% 50% no-repeat no-repeat;
+}
+
+
+
+/* Popup supprimer entreprise
+   ========================================================================== */
+   
+.content_clients_coordonnees .popupSupEntreprise .msg_conf_sup_entreprise p {
+	text-align: center;
+}
+.content_clients_coordonnees .popupSupEntreprise .titre_popup_sup_entreprise {
+	margin-bottom: 10px;
+}
+.content_clients_coordonnees .popupSupEntreprise .btns_popup_sup_entreprise {
+	margin: 0px 10px 10px 0px;
+}
+.content_clients_coordonnees .popupSupEntreprise .btns_popup_sup_entreprise p {
+	text-align: center;
+}
+.content_clients_coordonnees .popupSupEntreprise .btns_popup_sup_entreprise input {
+	margin: 10px 10px 0px 0px;
+}

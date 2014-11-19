@@ -1,0 +1,188 @@
+{
+	"newGalery" 							: "New gallery",
+	
+	"newGaleryPopupTitle"					: "Add a new gallery",
+	
+	"newImage" 								: "New picture",
+	
+	"deleteImage" 							: "Delete picture",
+	
+	"addImage" 								: "Add a new picture",
+	
+	"news" 									: "News",
+	
+	"keyWords" 								: "Keywords",
+		
+	"gallery" 								: "Galleries",
+	
+	"informations" 							: "Informations",
+	
+	"images" 								: "Pictures",
+	
+	"videos" 								: "Videos",
+	
+	"sounds" 								: "Sounds",
+	
+	"confirm" 								: "Confirm",
+	
+	"cancel" 								: "Cancel",
+	
+	"visits" 								: "Visits",
+	
+	"yes" 									: "Yes",
+	
+	"no" 									: "No",
+	
+	"deleteImage?" 							: "Are you sure?",
+	
+	"image" 								: "Image",
+	
+	"description" 							: "Description",
+	
+	"galleryName" 							: "Gallery name",
+	
+	"edit" 									: "Edit",
+	
+	"deleteGallery" 						: "Delete gallery",
+	
+	"deleteGaleryPopupTitle" 				: "Delete gallery",
+	
+	"keyWordText" 							: "Keyword title",
+	
+	"addKeyWord" 							: "Add keyword",
+	
+	"newKeyWordPopupTitle"					: "New keyword",
+	
+	"deleteKeyword"							: "Delete keyword",
+	
+	"deleteKeyWordPopupTitle" 				: "Delete keyword ?",
+	
+	"previewAndChoice" 						: "Gallery preview and choice for the selected keyword",
+	
+	"validateChanges"						: "Validate changes",
+	
+	"validateKeyWordPopupTitle"				: "Validate changes ?",
+	
+	"documentTitle"							: "News edition",
+	
+	"toolboxTitle"							: "Toolbox",
+	
+	"addText"								: "Add text at the end of the article",
+	
+	"addImage2"								: "Add picture at the end of the article",
+	
+	"title"									: "Title",
+	
+	"date"									: "Date",
+	
+	"place"									: "Place",
+	
+	"insertTextAfter"						: "Insert text after selected item",
+	
+	"insertImageAfter"						: "Insert picture after selected item",
+	
+	"deleteItem"							: "Delete selected item",
+	
+	"saveChanges"							: "Save changes",
+	
+	"deleteNews"							: "Delete article",
+	
+	"newTextHere"							: "New text here",
+	
+	"NoNewsSelectedError"					: "Error, no news selected",
+	
+	"NoItemSelectedError"					: "Error, no item selected",
+	
+	"addNews"								: "New article",
+	
+	"summary"								: "Summary",
+	
+	"gallerycp"								: "Waypoint gallery",
+	
+	"position"								: "Place",
+	
+	"waypoints"								: "Waypoints",
+	
+	"general"								: "General",
+	
+	"latitude"								: "Latitude",
+	
+	"longitude"								: "Longitude",
+	
+	"associatedGalleryName"					: "Associated gallery name",
+	
+	"descriptive"							: "Descriptive",
+	
+	"descriptiveTitle"						: "Descriptive title",
+	
+	"visitName"								: "Visit name",
+	
+	"visitedTown"							: "Visited town",
+	
+	"waypointsNumber"						: "Waypoints number",
+	
+	"newVisitPopupTitle"					: "Add visit",
+	
+	"newVisit"								: "New visit",
+	
+	"visitName"								: "Visit name",
+	
+	"visitTown"								: "Visit town",
+	
+	"comment"								: "Comments",
+	
+	"submissions"							: "Submissions",
+	
+	"deleteVisite?"							: "Delete visit?",
+	
+	"delVisite"								: "Remove visit",
+	
+	"deleteWaypoint?"						: "Delete waypoint ?",
+	
+	"delWaypoint"							: "Delete waypoint",
+	
+	"submissionPreview"						: "Submission preview",
+	
+	"addWaypoint"							: "Add waypoint",
+	
+	"insertWaypoint"						: "Insert waypoint",
+	
+	"waypointType"							: "Waypoint type ?",
+	
+	"waypointReal"							: "Classical",
+	
+	"waypointFake"							: "Virtual",
+	
+	"approve"								: "Approve",
+	
+	"disapprove"							: "Disapprove",
+	
+	"quality"								: "Quality",
+	
+	"addNewSound"							: "Add new sound",
+	
+	"addSound"								: "Add sound",
+	
+	"sound"									: "Sound file",
+	
+	"video"									: "Video",
+	
+	"addVideo"								: "Add video",
+	
+	"addNewVideo"							: "New video",
+	
+	"delVideo"								: "Delete video",
+	
+	"deleteVideo?"							: "Delete the video?",
+	
+	"delSound"								: "Delete sound",
+	
+	"deleteSound?"							: "Really delete sound?",
+	
+	"addArticle"							: "Add a new article",
+	
+	"editImagePopup"						: "Edit an image description",
+	
+	"editImage"								: "Edit"
+	
+}
