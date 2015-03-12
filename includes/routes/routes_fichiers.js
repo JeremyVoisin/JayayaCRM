@@ -24,7 +24,7 @@ module.exports = function(app){
 			.forEach(function(file){
 				fs.readFile("js/PostRenderScripts/"+file, function(err, contents) {
 					prs += contents;
-				}); 
+				});
 			});
 	});
 	
@@ -38,6 +38,34 @@ module.exports = function(app){
 				}); 
 			});
 	});
+	
+	fs.readdir("js/SinglePageApp",function(err,files){
+	        var result = [];
+			var fis = files.filter(function(file) {
+				return file.substr(-3)==='.js';
+			});
+			for(var i = 0; i < fis.length; i++){
+			    var contents = fs.readFileSync("js/SinglePageApp/"+fis[i],{encoding:"UTF-8"});
+				var reg = /[\+;\(\)=?:{}\[\]\\,.-/\*%\n\t\s]{1}_[(]{1}"(.*?)"[)]{1}/g;
+				var temp = contents.match(reg);
+				if(temp){
+					for(var j = 0; j < temp.length; j++){
+						result[result.length] = (/.*?_\("(.*?)"\).*?/g.exec(temp[j])[1]);
+					}
+				}
+			}
+			noDouble(result);
+	});
+	
+	function noDouble(array1){
+	    var resultArray = [], array2 = [];
+	    for(var i = 0; i < array1.length; i++){
+	    	array2[array1[i]] = "";
+	    }
+	    for(var x in array2){
+	    	resultArray[resultArray.length] = x;
+	    }
+	}
 
 	/*
 	*	Route principale
@@ -50,6 +78,15 @@ module.exports = function(app){
 	*/
 	.get("/js/includes",function(req, res) {
 		fs.readFile("js/includes.js",function(err,datas){
+	        res.setHeader('Content-Type', 'text/javascript');
+	    	res.end(datas);
+		});
+	})
+	/*
+	*	Récupération des fichiers de langue
+	*/
+	.get("/js/Lang/:fileName",function(req, res) {
+		fs.readFile("js/Lang/" + req.params.fileName + ".json",function(err,datas){
 	        res.setHeader('Content-Type', 'text/javascript');
 	    	res.end(datas);
 		});

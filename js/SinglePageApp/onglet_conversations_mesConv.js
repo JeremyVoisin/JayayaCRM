@@ -22,8 +22,8 @@ o_conv_client.addCssClass("content_clients_allConv");
 			var billet = DatasBuffer.getRequest("/billets/"+conversations.idB[i])[0];
 			// Creation des items de la liste
 			if(messages)
-				liste_conversations_mine.addItem('<p class="nom_conversation">'+billet.titre+'</p><p class="nb_com">'+messages.length+' commentaires</p>',billet._id);
-			else liste_conversations_mine.addItem('<p class="nom_conversation">'+billet.titre+'</p><p class="nb_com">0 commentaires</p>',billet._id);
+				liste_conversations_mine.addItem('<p class="nom_conversation">'+billet.titre+'</p><p class="nb_com">'+messages.length+' '+_("commentaires")+'</p>',billet._id);
+			else liste_conversations_mine.addItem('<p class="nom_conversation">'+billet.titre+'</p><p class="nb_com">0 '+_("commentaire")+'</p>',billet._id);
 		}
 	}
 	

@@ -22,8 +22,8 @@ o_conv_all.addCssClass("content_clients_allConv");
 		var messages = DatasBuffer.getRequest("/billets/"+conversations[i]._id+"/messages");
 		// Creation des items de la liste
 		if(messages)
-			liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">'+messages.length+' commentaires</p>',conversations[i]._id);
-		else liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">0 commentaires</p>',conversations[i]._id);
+			liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">'+messages.length+' '+_("commentaires")+'</p>',conversations[i]._id);
+		else liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">0 '+_("commentaire")+'</p>',conversations[i]._id);
 	}
 	
 	content_liste_all_conversations.setGraphicalElement(liste_conversations_autres);

@@ -33,7 +33,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(datas[0].nSIREN !== null){
 			var itemSiren = new GraphicalEditInput();
-			itemSiren.setNameField('<span class="gras_champs_contact">Siren</span>');
+			itemSiren.setNameField('<span class="gras_champs_contact">'+_("Siren")+'</span>');
 			itemSiren.setValueField(datas[0].nSIREN);
 			itemSiren.setFunctionOnClick("edit_siren_entreprise(this)");
 			this.addItem(itemSiren,"siren");
@@ -41,7 +41,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(adr.ville && adr.ville.code_postal !== null){
 			var itemCP = new GraphicalEditInput();
-			itemCP.setNameField('<span class="gras_champs_contact">Code Postal</span>');
+			itemCP.setNameField('<span class="gras_champs_contact">'+_("Code Postal")+'</span>');
 			itemCP.setValueField(adr.ville.code_postal);
 			itemCP.setFunctionOnClick("edit_cp_entreprise(this)");
 			this.addItem(itemCP,"CP");
@@ -49,7 +49,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(adr.ville && adr.ville.nomVille !== null && adr.ville.nomVille != ''){
 			var itemVille = new GraphicalEditInput();
-			itemVille.setNameField('<span class="gras_champs_contact">Ville</span>');
+			itemVille.setNameField('<span class="gras_champs_contact">'+_("Ville")+'</span>');
 			itemVille.setValueField(adr.ville.nomVille);
 			itemVille.setFunctionOnClick("edit_ville_entreprise(this)");
 			this.addItem(itemVille,"Ville");
@@ -57,7 +57,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(adr.lieu && adr.lieu.num !== ''){
 			var itemNumVoie = new GraphicalEditInput();
-			itemNumVoie.setNameField('<span class="gras_champs_contact">Numero de voie</span>');
+			itemNumVoie.setNameField('<span class="gras_champs_contact">'+_("Numero de voie")+'</span>');
 			itemNumVoie.setValueField(adr.lieu.num);
 			itemNumVoie.setFunctionOnClick("edit_num_voie_entreprise(this)");
 			this.addItem(itemNumVoie,"Numero de voie");
@@ -65,7 +65,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(adr.lieu && adr.lieu.voie !== ''){
 			var itemTypeVoie = new GraphicalEditInput();
-			itemTypeVoie.setNameField('<span class="gras_champs_contact">Type de voie</span>');
+			itemTypeVoie.setNameField('<span class="gras_champs_contact">'+_("Type de voie")+'</span>');
 			itemTypeVoie.setValueField(adr.lieu.voie);
 			itemTypeVoie.setFunctionOnClick("edit_type_voie_entreprise(this)");
 			this.addItem(itemTypeVoie,"Type de voie");
@@ -73,7 +73,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(adr.lieu && adr.lieu.nomVoie !== ''){
 			var itemNomVoie = new GraphicalEditInput();
-			itemNomVoie.setNameField('<span class="gras_champs_contact">Nom de la voie</span>');
+			itemNomVoie.setNameField('<span class="gras_champs_contact">'+_("Nom de la voie")+'</span>');
 			itemNomVoie.setValueField(adr.lieu.nomVoie);
 			itemNomVoie.setFunctionOnClick("edit_nom_voie_entreprise(this)");
 			this.addItem(itemNomVoie,"Nom de la voie");
@@ -81,7 +81,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(adr.ville && adr.lieu.pays !== ''){
 			var itemPays = new GraphicalEditInput();
-			itemPays.setNameField('<span class="gras_champs_contact">Pays</span>');
+			itemPays.setNameField('<span class="gras_champs_contact">'+_("Pays")+'</span>');
 			itemPays.setValueField(adr.ville.pays);
 			itemPays.setFunctionOnClick("edit_pays_entreprise(this)");
 			this.addItem(itemPays,"Pays");
@@ -89,7 +89,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(datas[0].mail !== ''){
 			var itemMail = new GraphicalEditInput();
-			itemMail.setNameField('<span class="gras_champs_contact">Email</span>');
+			itemMail.setNameField('<span class="gras_champs_contact">'+_("Email")+'</span>');
 			itemMail.setValueField(datas[0].mail);
 			itemMail.setFunctionOnClick("edit_mail_entreprise(this)");
 			this.addItem(itemMail,"Email");
@@ -97,7 +97,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(datas[0].tel !== ''){
 			var itemTel = new GraphicalEditInput();
-			itemTel.setNameField('<span class="gras_champs_contact">Tel.</span>');
+			itemTel.setNameField('<span class="gras_champs_contact">'+_("Tel")+'</span>');
 			itemTel.setValueField(datas[0].tel);
 			itemTel.setFunctionOnClick("edit_tel_entreprise(this)");
 			this.addItem(itemTel,"Telephone");
@@ -105,7 +105,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(datas[0].fax !== ''){
 			var itemFax = new GraphicalEditInput();
-			itemFax.setNameField('<span class="gras_champs_contact">Fax.</span>');
+			itemFax.setNameField('<span class="gras_champs_contact">'+_("Fax")+'</span>');
 			itemFax.setValueField(datas[0].fax);
 			itemFax.setFunctionOnClick("edit_fax_entreprise(this)");
 			this.addItem(itemFax,"Fax");
@@ -113,7 +113,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		
 		if(datas[0].site_web !== ''){
 			var itemSite = new GraphicalEditInput();
-			itemSite.setNameField('<span class="gras_champs_contact">Site web</span>');
+			itemSite.setNameField('<span class="gras_champs_contact">'+_("Site web")+'</span>');
 			itemSite.setValueField(datas[0].site_web);
 			itemSite.setFunctionOnClick("edit_site_web_entreprise(this)");
 			this.addItem(itemSite,"Site");
@@ -122,7 +122,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 		if(datas[0].commentaire !== ''){
 			var itemNote = new GraphicalEditInput();
 			itemNote.setTypeField('textarea');
-			itemNote.setNameField('<span class="gras_champs_contact">Commentaire</span>');
+			itemNote.setNameField('<span class="gras_champs_contact">'+_("Commentaire")+'</span>');
 			itemNote.setValueField(datas[0].commentaire);
 			itemNote.setFunctionOnClick("edit_commentaire_entreprise(this)");
 			this.addItem(itemNote,"Commentaire");
@@ -140,7 +140,7 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 	options_clients_coord.addCssClass("content_options_clients_coord");
 	options_clients_coord.setHeight(1);
 	options_clients_coord.setContent('<ul>'+
-									'<li id="sup_entreprise" class="bouton_option showPopup" popup="popupSupEntreprise"><a href="javascript:void(0);">Supprimer l\'entreprise</a></li>'+
+									'<li id="sup_entreprise" class="bouton_option showPopup" popup="popupSupEntreprise"><a href="javascript:void(0);">'+_("Supprimer l'entreprise")+'</a></li>'+
 									'</ul>');
 									
 									
@@ -162,12 +162,12 @@ o_coordonnees.addCssClass("content_clients_coordonnees");
 			var titre_popup_sup_entreprise = content_sup_entreprise.newVerticalLayout();
 			titre_popup_sup_entreprise.addCssClass("titre_popup_sup_entreprise");
 			titre_popup_sup_entreprise.setHeight(1);
-			titre_popup_sup_entreprise.setContent('<h2 class="titre_liste">Supprimer l\'entreprise</h2>');
+			titre_popup_sup_entreprise.setContent('<h2 class="titre_liste">'+_("Supprimer l'entreprise")+'</h2>');
 			
 			// Message de confirmation
 			var msg_conf_sup_entreprise = content_sup_entreprise.newVerticalLayout();
 			msg_conf_sup_entreprise.addCssClass("msg_conf_sup_entreprise");
-			msg_conf_sup_entreprise.setContent('<p>Êtes-vous sûr de vouloir supprimer l\'entreprise ?</p>');
+			msg_conf_sup_entreprise.setContent('<p>'+_("Êtes-vous sûr de vouloir supprimer l'entreprise ?")+'</p>');
 			
 			// Boutons de validation & annulation
 			var btns_popup_sup_entreprise = content_sup_entreprise.newVerticalLayout();

@@ -27,8 +27,8 @@ include("lib/conversationnalEngine");
 		nav_conv.addCssClass("navigateur");
 		
 			// Ajout des onglets
-			var o_conv_client = nav_conv.addTab('MES CONVERSATIONS');
-			var o_conv_all = nav_conv.addTab('TOUTES');
+			var o_conv_client = nav_conv.addTab(_("MES CONVERSATIONS"));
+			var o_conv_all = nav_conv.addTab(_("TOUTES"));
 		
 		// Ajout du navigateur Conversations au content nav conversations
 		content_nav_conv.setGraphicalElement(nav_conv);
@@ -58,7 +58,7 @@ include("lib/conversationnalEngine");
 		options_liste_conversations.addCssClass("options_liste_conversations");
 		options_liste_conversations.setHeight(1);
 		options_liste_conversations.setContent('<ul>'+
-										'<li id="ajouter_conversation" class="bouton_option showPopup" popup="popup_nouvelle_conv"><a href="#">Nouvelle conversation</a></li>'+
+										'<li id="ajouter_conversation" class="bouton_option showPopup" popup="popup_nouvelle_conv"><a href="#">'+_("Nouvelle conversation")+'</a></li>'+
 										'</ul>');
 		
 										
@@ -77,15 +77,15 @@ include("lib/conversationnalEngine");
 				var titre_popup_nouvelle_conv = content_nouvelle_conv.newVerticalLayout();
 				titre_popup_nouvelle_conv.addCssClass("titre_popup_nouvelle_conv");
 				titre_popup_nouvelle_conv.setHeight(1);
-				titre_popup_nouvelle_conv.setContent('<h2 class="titre_liste">Nouvelle conversation</h2>');
+				titre_popup_nouvelle_conv.setContent('<h2 class="titre_liste">'+_("Nouvelle conversation")+'</h2>');
 				
 				var formulaireNouveauBillet = content_nouvelle_conv.newVerticalLayout();
 				formulaireNouveauBillet.addCssClass("formulaire_nouvelle_entreprise");
 				
 					var newBilletForm = new GraphicalForm("/billets/new");
 			
-					newBilletForm.addInput("Sujet","text","titre");
-					newBilletForm.addInput("Ajouter","submit","ajouter");
+					newBilletForm.addInput(_("Sujet"),"text","titre");
+					newBilletForm.addInput(_("Ajouter"),"submit","ajouter");
 			
 					newBilletForm.setPopupToHide(popup_nouvelle_conv);
 				
@@ -95,8 +95,8 @@ include("lib/conversationnalEngine");
 								var conversations = DatasBuffer.getRequest("/billets");
 								for(var i=0;conversations && i<conversations.length;i++){
 									var messages = DatasBuffer.getRequest("/billets/"+conversations[i]._id+"/messages");
-									if(messages)liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">'+messages.length+' commentaires</p>',conversations[i]._id);
-									else liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">0 commentaire</p>',conversations[i]._id);
+									if(messages)liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">'+messages.length+' '+_("commentaires")+'</p>',conversations[i]._id);
+									else liste_conversations_autres.addItem('<p class="nom_conversation">'+conversations[i].titre+'</p><p class="nb_com">0 '+_("commentaire")+'</p>',conversations[i]._id);
 								}
 								liste_conversations_autres.update();
 							})
@@ -158,7 +158,7 @@ include("lib/conversationnalEngine");
 						if(user)
 							liste_conv.addItem('<div class="bloc_com"><p class="entete_com"><span class="name_com">'+user.prenom+' '+user.nom+'</span><span class="date_com">Le '+getFormatDate(date)+' à '+getFormatHeure(date)+'</span></p><p class="corps_com">'+datas[i].corpsMsg+'</p></div>');
 						else
-							liste_conv.addItem('<div class="bloc_com"><p class="entete_com"><span class="name_com">Utilisateur supprimé</span><span class="date_com">Le '+getFormatDate(date)+' à '+getFormatHeure(date)+'</span></p><p class="corps_com">'+datas[i].corpsMsg+'</p></div>');
+							liste_conv.addItem('<div class="bloc_com"><p class="entete_com"><span class="name_com">'+_("Utilisateur supprimé")+'</span><span class="date_com">Le '+getFormatDate(date)+' à '+getFormatHeure(date)+'</span></p><p class="corps_com">'+datas[i].corpsMsg+'</p></div>');
 					}
 				});
 				
@@ -173,7 +173,7 @@ include("lib/conversationnalEngine");
 				
 				GC.addHTMLContent("<div id='convTextArea'>");
 				GC.addHTMLContent('<textarea id="corpsMsg" name=""></textarea>');
-				GC.addHTMLContent('<p><input onclick="event.preventDefault();sendAnswer();" id="send_com" type="button" value="Repondre" /></p>');
+				GC.addHTMLContent('<p><input onclick="event.preventDefault();sendAnswer();" id="send_com" type="button" value="'+_("Répondre")+'" /></p>');
 				//GC.addHTMLContent('<p><span id="file_conv">Fichier : <input type="file" /></span><input onclick="event.preventDefault();sendAnswer();" id="send_com" type="button" value="Repondre" /></p>');
 				GC.addHTMLContent("</div>");
 				
@@ -188,7 +188,7 @@ include("lib/conversationnalEngine");
 				var content_titre_participants = content_participants.newVerticalLayout();
 				content_titre_participants.addCssClass("content_titre_participants");
 				content_titre_participants.setHeight(1);
-				content_titre_participants.setContent("<h2>Participants</h2>");
+				content_titre_participants.setContent("<h2>"+_("Participants")+"</h2>");
 			
 				// Bloc liste des participants
 				var content_liste_participants = content_participants.newVerticalLayout();
@@ -219,7 +219,7 @@ include("lib/conversationnalEngine");
 		options_conversation.addCssClass("options_conversation");
 		options_conversation.setHeight(1);
 		options_conversation.setContent('<ul>'+
-												'<li id="fermer_conv" class="bouton_option showPopup" popup="popup_fermer_conv"><a href="#">Fermer la conversation</a></li>'+
+												'<li id="fermer_conv" class="bouton_option showPopup" popup="popup_fermer_conv"><a href="#">'+_("Fermer la conversation")+'</a></li>'+
 												'</ul>');
 		
 			
@@ -238,12 +238,12 @@ include("lib/conversationnalEngine");
 					var titre_popup_fermer_conv = content_fermer_conv.newVerticalLayout();
 					titre_popup_fermer_conv.addCssClass("titre_popup_fermer_conv");
 					titre_popup_fermer_conv.setHeight(1);
-					titre_popup_fermer_conv.setContent('<h2 class="titre_liste">Fermer la conversation</h2>');
+					titre_popup_fermer_conv.setContent('<h2 class="titre_liste">'+_("Fermer la conversation")+'</h2>');
 					
 					// Message de confirmation
 					var msg_conf_fermer_conv = content_fermer_conv.newVerticalLayout();
 					msg_conf_fermer_conv.addCssClass("msg_conf_fermer_conv");
-					msg_conf_fermer_conv.setContent('<p>Êtes-vous sûr de vouloir fermer la conversation ?</p>');
+					msg_conf_fermer_conv.setContent('<p>'+_("Êtes-vous sûr de vouloir fermer la conversation ?")+'</p>');
 					
 					// Boutons de validation & annulation
 					var btns_popup_fermer_conv = content_fermer_conv.newVerticalLayout();

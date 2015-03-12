@@ -27,7 +27,7 @@ taches_p.addCssClass("corps_taches");
 			var titre_taches_before = content_liste_taches_before.newVerticalLayout();
 			titre_taches_before.addCssClass("titre_taches_before");
 			titre_taches_before.setHeight(1);
-			titre_taches_before.setContent('<h2 class="hight_titre_liste">En retard</h2>');
+			titre_taches_before.setContent('<h2 class="hight_titre_liste">'+_("En retard")+'</h2>');
 			
 			// Liste des taches en retard
 			var content_liste_before = content_liste_taches_before.newVerticalLayout();
@@ -47,7 +47,7 @@ taches_p.addCssClass("corps_taches");
 			var titre_taches_now = content_liste_taches_now.newVerticalLayout();
 			titre_taches_now.addCssClass("titre_taches_now");
 			titre_taches_now.setHeight(1);
-			titre_taches_now.setContent('<h2 class="hight_titre_liste">Aujourd\'hui</h2>');
+			titre_taches_now.setContent('<h2 class="hight_titre_liste">'+_("Aujourd'hui")+'</h2>');
 			
 			// Liste des taches du jour
 			var content_liste_now = content_liste_taches_now.newVerticalLayout();
@@ -68,7 +68,7 @@ taches_p.addCssClass("corps_taches");
 			var titre_taches_after = content_liste_taches_after.newVerticalLayout();
 			titre_taches_after.addCssClass("titre_taches_after");
 			titre_taches_after.setHeight(1);
-			titre_taches_after.setContent('<h2 class="hight_titre_liste">A venir</h2>');
+			titre_taches_after.setContent('<h2 class="hight_titre_liste">'+_("A venir")+'</h2>');
 			
 			// Liste des taches a venir
 			var content_liste_after = content_liste_taches_after.newVerticalLayout();
@@ -111,7 +111,7 @@ taches_p.addCssClass("corps_taches");
 		titre_tache_selectContainer = new GraphicalContainer();
 		titre_tache_selectContainer.addCssClass("titre_tache_select");
 		
-		titre_tache_selectContainer.setHTMLContent('<h2 class="hight_titre_liste">SELECTIONNER UNE TACHE</h2>');
+		titre_tache_selectContainer.setHTMLContent('<h2 class="hight_titre_liste">'+_("SELECTIONNER UNE TACHE")+'</h2>');
 		
 		titre_tache_select.setGraphicalElement(titre_tache_selectContainer);
 		
@@ -160,25 +160,25 @@ taches_p.addCssClass("corps_taches");
 						var date = new Date(datas[0].date);
 						
 						var itemTitre = new GraphicalEditInput();
-						itemTitre.setNameField('<span class="gras_champs_contact">Titre</span>');
+						itemTitre.setNameField('<span class="gras_champs_contact">'+_("Titre")+'</span>');
 						itemTitre.setValueField(datas[0].titre);
 						itemTitre.setFunctionOnClick("edit_titre_tache(this)");
 						this.addItem(itemTitre);
 						
 						var itemLieu = new GraphicalEditInput();
-						itemLieu.setNameField('<span class="gras_champs_contact">Lieu</span>');
+						itemLieu.setNameField('<span class="gras_champs_contact">'+_("Lieu")+'</span>');
 						itemLieu.setValueField(datas[0].lieu);
 						itemLieu.setFunctionOnClick("edit_lieu_tache(this)");
 						this.addItem(itemLieu);
 						
 						var itemDate = new GraphicalEditInput();
-						itemDate.setNameField('<span class="gras_champs_contact">Date</span>');
+						itemDate.setNameField('<span class="gras_champs_contact">'+_("Date")+'</span>');
 						itemDate.setValueField(getFormatDate(date));
 						itemDate.setFunctionOnClick("edit_date_tache(this)");
 						this.addItem(itemDate);
 						
 						var itemHeure = new GraphicalEditInput();
-						itemHeure.setNameField('<span class="gras_champs_contact">Heure</span>');
+						itemHeure.setNameField('<span class="gras_champs_contact">'+_("Heure")+'</span>');
 						itemHeure.setValueField(getFormatHeure(date));
 						itemHeure.setFunctionOnClick("edit_heure_tache(this)");
 						this.addItem(itemHeure);
@@ -191,7 +191,7 @@ taches_p.addCssClass("corps_taches");
 					var btn_tache_select = infos_tache_select.newVerticalLayout();
 					btn_tache_select.setHeight(1);
 					var gc_btn_tache = new GraphicalContainer();
-					gc_btn_tache.setHTMLContent('<input class="showPopup btn_showPopup_clo_tache" popup="popup_clo_tache" type="button" value="Cloturer" style="width:100%;height:100%;" disabled/>');
+					gc_btn_tache.setHTMLContent('<input class="showPopup btn_showPopup_clo_tache" popup="popup_clo_tache" type="button" value="'+_("Cloturer")+'" style="width:100%;height:100%;" disabled/>');
 					
 					btn_tache_select.setGraphicalElement(gc_btn_tache);
 					
@@ -210,12 +210,12 @@ taches_p.addCssClass("corps_taches");
 							var titre_popup_clo_tache = content_clo_tache.newVerticalLayout();
 							titre_popup_clo_tache.addCssClass("titre_popup_clo_tache");
 							titre_popup_clo_tache.setHeight(1);
-							titre_popup_clo_tache.setContent('<h2 class="titre_liste">Cloturer une tache</h2>');
+							titre_popup_clo_tache.setContent('<h2 class="titre_liste">'+_("Cloturer une tache")+'</h2>');
 							
 							// Message de confirmation
 							var msg_conf_clo_tache = content_clo_tache.newVerticalLayout();
 							msg_conf_clo_tache.addCssClass("msg_conf_clo_tache");
-							msg_conf_clo_tache.setContent('<p>Êtes-vous sûr de vouloir cloturer la tâche ?</p>');
+							msg_conf_clo_tache.setContent('<p>'+_("Êtes-vous sûr de vouloir cloturer la tâche ?")+'</p>');
 							
 							// Boutons de validation & annulation
 							var btns_popup_clo_tache = content_clo_tache.newVerticalLayout();
@@ -223,8 +223,8 @@ taches_p.addCssClass("corps_taches");
 							btns_popup_clo_tache.setHeight(1);
 							btns_popup_clo_tache.setContent(
 							'<p>'+
-							'<input type="button" value="Oui" onclick="remove_tache()" />'+
-							'<input type="button" value="Non" onclick="GraphicalPopup.hidePopup('+popup_clo_tache.getPopupIndex()+');" />'+
+							'<input type="button" value="'+_("Oui")+'" onclick="remove_tache()" />'+
+							'<input type="button" value="'+_("Non")+'" onclick="GraphicalPopup.hidePopup('+popup_clo_tache.getPopupIndex()+');" />'+
 							'</p>'
 							);
 							
@@ -247,7 +247,7 @@ taches_p.addCssClass("corps_taches");
 				desc_tache_selectContainer.getCoupler().updateHandler(function(datas){
 					var itemDescription = new GraphicalEditInput();
 					itemDescription.setTypeField('textarea');
-					itemDescription.setNameField('<span class="gras_champs_contact">Description</span> :');
+					itemDescription.setNameField('<span class="gras_champs_contact">'+_("Description")+'</span> :');
 					itemDescription.setValueField(datas[0].description);
 					itemDescription.setFunctionOnClick("edit_description_tache(this)");
 					desc_tache_selectContainer.setHTMLContent(itemDescription);
@@ -260,7 +260,7 @@ taches_p.addCssClass("corps_taches");
 	options_taches.addCssClass("content_options_taches");
 	options_taches.setHeight(1);
 	options_taches.setContent('<ul>'+
-									'<li id="ajouter_tache" class="bouton_option showPopup" popup="popupAjoutTache"><a href="#">Nouvelle tâche</a></li>'+
+									'<li id="ajouter_tache" class="bouton_option showPopup" popup="popupAjoutTache"><a href="#">'+_("Nouvelle tâche")+'</a></li>'+
 									'</ul>');
 		
 	
@@ -278,7 +278,7 @@ taches_p.addCssClass("corps_taches");
 			var titre_popup_nouvelle_tache = content_nouvelle_tache.newVerticalLayout();
 			titre_popup_nouvelle_tache.addCssClass("titre_popup_nouvelle_tache");
 			titre_popup_nouvelle_tache.setHeight(1);
-			titre_popup_nouvelle_tache.setContent('<h2 class="titre_liste">Nouvelle tache</h2>');
+			titre_popup_nouvelle_tache.setContent('<h2 class="titre_liste">'+_("Nouvelle tache")+'</h2>');
 			
 			// Formulaire d'ajout d'une tache
 			var formulaire_nouvelle_tache = content_nouvelle_tache.newVerticalLayout();
@@ -290,12 +290,12 @@ taches_p.addCssClass("corps_taches");
 			
 			var newTacheForm = new GraphicalForm("/taches/new");
 			
-			newTacheForm.addInput("Titre","text","titre");
-			newTacheForm.addInput("Date","text","date","jj/mm/aaaa");
-			newTacheForm.addInput("Heure","text","heure","hh:mm");
-			newTacheForm.addInput("Lieu","text","lieu");
-			newTacheForm.addInput("Description","textarea","description");
-			newTacheForm.addInput("Ajouter","submit","ajouter");
+			newTacheForm.addInput(_("Titre"),"text","titre");
+			newTacheForm.addInput(_("Date"),"text","date","jj/mm/aaaa");
+			newTacheForm.addInput(_("Heure"),"text","heure","hh:mm");
+			newTacheForm.addInput(_("Lieu"),"text","lieu");
+			newTacheForm.addInput(_("Description"),"textarea","description");
+			newTacheForm.addInput(_("Ajouter"),"submit","ajouter");
 			
 			newTacheForm.setPopupToHide(popup_nouvelle_tache);
 			

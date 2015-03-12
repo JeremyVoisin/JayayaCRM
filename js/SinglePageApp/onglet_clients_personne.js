@@ -32,52 +32,52 @@ o_personnes.addCssClass("content_clients_personnees");
 		datas = datas[0];
 		
 		if(datas.nom !== ''){
-			this.addItem('<span class="gras_champs_contact">Nom</span><span style="margin: 0px 5px 0px 5px">:</span><span class="current_value">'+datas.nom+'</span>',"Nom");
+			this.addItem('<span class="gras_champs_contact">'+_("Nom")+'</span><span style="margin: 0px 5px 0px 5px">:</span><span class="current_value">'+datas.nom+'</span>',"Nom");
 		}
 		
 		if(datas.prenom !== ''){
-			this.addItem('<span class="gras_champs_contact">Prenom</span><span style="margin: 0px 5px 0px 5px">:</span><span class="current_value">'+datas.prenom+'</span>',"Prenom");
+			this.addItem('<span class="gras_champs_contact">'+_("Prénom")+'</span><span style="margin: 0px 5px 0px 5px">:</span><span class="current_value">'+datas.prenom+'</span>',"Prenom");
 		}
 		
 		if(datas.statut !== ''){
 			var itemStatut = new GraphicalEditInput();
-			itemStatut.setNameField('<span class="gras_champs_contact">Statut</span>');
+			itemStatut.setNameField('<span class="gras_champs_contact">'+_("Statut")+'</span>');
 			itemStatut.setValueField(datas.statut);
 			itemStatut.setFunctionOnClick("edit_statut_personne(this)");
-			this.addItem(itemStatut,"Statut");
+			this.addItem(itemStatut,_("Statut"));
 		}	
 		
 		if(datas.tel !== ''){
 			var itemTel = new GraphicalEditInput();
-			itemTel.setNameField('<span class="gras_champs_contact">Tel</span>');
+			itemTel.setNameField('<span class="gras_champs_contact">'+_("Tel")+'</span>');
 			itemTel.setValueField(datas.tel);
 			itemTel.setFunctionOnClick("edit_tel_personne(this)");
-			this.addItem(itemTel,"Tel");
+			this.addItem(itemTel,_("Tel"));
 		}
 		
 		if(datas.fax !== ''){
 			var itemFax = new GraphicalEditInput();
-			itemFax.setNameField('<span class="gras_champs_contact">Fax</span>');
+			itemFax.setNameField('<span class="gras_champs_contact">'+_("Fax")+'</span>');
 			itemFax.setValueField(datas.fax);
 			itemFax.setFunctionOnClick("edit_fax_personne(this)");
-			this.addItem(itemFax,"Fax");
+			this.addItem(itemFax,_("Fax"));
 		}
 		
 		if(datas.mail !== ''){
 			var itemMail = new GraphicalEditInput();
-			itemMail.setNameField('<span class="gras_champs_contact">Mail</span>');
+			itemMail.setNameField('<span class="gras_champs_contact">'+_("Mail")+'</span>');
 			itemMail.setValueField(datas.mail);
 			itemMail.setFunctionOnClick("edit_mail_personne(this)");
-			this.addItem(itemMail,"Mail");
+			this.addItem(itemMail,_("Mail"));
 		}
 		
 		if(datas.commentaire !== ''){
 			var itemNotes = new GraphicalEditInput();
 			itemNotes.setTypeField('textarea');
-			itemNotes.setNameField('<span class="gras_champs_contact">Commentaire</span>');
+			itemNotes.setNameField('<span class="gras_champs_contact">'+_("Commentaire")+'</span>');
 			itemNotes.setValueField(datas.commentaire);
 			itemNotes.setFunctionOnClick("edit_commentaire_personne(this)");
-			this.addItem(itemNotes,"Commentaire");
+			this.addItem(itemNotes,_("Commentaire"));
 		}
 	
 	});
@@ -92,7 +92,7 @@ o_personnes.addCssClass("content_clients_personnees");
 	options_clients_personne.addCssClass("content_options_clients_personne");
 	options_clients_personne.setHeight(1);
 	options_clients_personne.setContent('<ul>'+
-									'<li id="sup_personne" class="bouton_option showPopup" popup="popupSupPersonne"><a href="javascript:void(0);">Supprimer la personne</a></li>'+
+									'<li id="sup_personne" class="bouton_option showPopup" popup="popupSupPersonne"><a href="javascript:void(0);">'+_("Supprimer la personne")+'</a></li>'+
 									'</ul>');
 									
 	
@@ -114,12 +114,12 @@ o_personnes.addCssClass("content_clients_personnees");
 			var titre_popup_sup_personne = content_sup_personne.newVerticalLayout();
 			titre_popup_sup_personne.addCssClass("titre_popup_sup_personne");
 			titre_popup_sup_personne.setHeight(1);
-			titre_popup_sup_personne.setContent('<h2 class="titre_liste">Supprimer la personne</h2>');
+			titre_popup_sup_personne.setContent('<h2 class="titre_liste">'+_("Supprimer la personne")+'</h2>');
 			
 			// Message de confirmation
 			var msg_conf_sup_personne = content_sup_personne.newVerticalLayout();
 			msg_conf_sup_personne.addCssClass("msg_conf_sup_personne");
-			msg_conf_sup_personne.setContent('<p>Êtes-vous sûr de vouloir supprimer la personne ?</p>');
+			msg_conf_sup_personne.setContent('<p>'+_("Êtes-vous sûr de vouloir supprimer la personne ?")+'</p>');
 			
 			// Boutons de validation & annulation
 			var btns_popup_sup_personne = content_sup_personne.newVerticalLayout();
@@ -127,8 +127,8 @@ o_personnes.addCssClass("content_clients_personnees");
 			btns_popup_sup_personne.setHeight(1);
 			btns_popup_sup_personne.setContent(
 			'<p>'+
-			'<input type="button" value="Oui" onclick="delete_personne()" />'+
-			'<input type="button" value="Non" onclick="GraphicalPopup.hidePopup('+popup_sup_personne.getPopupIndex()+');" />'+
+			'<input type="button" value="'+_("Oui")+'" onclick="delete_personne()" />'+
+			'<input type="button" value="'+_("Non")+'" onclick="GraphicalPopup.hidePopup('+popup_sup_personne.getPopupIndex()+');" />'+
 			'</p>'
 			);
 			

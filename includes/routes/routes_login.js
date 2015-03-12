@@ -47,6 +47,7 @@ module.exports = function(app, passport, carnet) {
   });
   
   app.get('/login/success',function(req,res){
+  	console.log(req.user);
 	res.status(200).send("User connected");
   });
   

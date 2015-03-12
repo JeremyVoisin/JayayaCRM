@@ -13,7 +13,7 @@ o_liste_contacts.addCssClass("content_clients_listeContacts");
 	var content_recherche = onglet_liste_contacts.newVerticalLayout();
 	content_recherche.addCssClass("bloc_recherche");
 	content_recherche.setHeight(1);
-	content_recherche.setContent('<input id="input_search_contact" type="search" placeholder="Rechercher" name="the_search" onkeyup="findContacts()">');
+	content_recherche.setContent('<input id="input_search_contact" type="search" placeholder="'+_("Rechercher")+'" name="the_search" onkeyup="findContacts()">');
 	
 	// Bloc liste des contacts
 	var content_liste_contacts = onglet_liste_contacts.newVerticalLayout();
@@ -36,7 +36,7 @@ o_liste_contacts.addCssClass("content_clients_listeContacts");
 	options_liste_contacts.addCssClass("content_options_liste_c");
 	options_liste_contacts.setHeight(1);
 	options_liste_contacts.setContent('<ul>'+
-									'<li id="ajouter_contact" class="bouton_option showPopup" popup="popupAjoutContact"><a href="#">Nouveau Contact</a></li>'+
+									'<li id="ajouter_contact" class="bouton_option showPopup" popup="popupAjoutContact"><a href="#">'+_("Nouveau Contact")+'</a></li>'+
 									'</ul>');
 	
 	// Popup lie au bouton d'ajout d'une nouvelle entreprise
@@ -52,7 +52,7 @@ o_liste_contacts.addCssClass("content_clients_listeContacts");
 			var titre_popup_nouveau_contact = content_nouveau_contact.newVerticalLayout();
 			titre_popup_nouveau_contact.addCssClass("titre_popup_nouveau_contact");
 			titre_popup_nouveau_contact.setHeight(1);
-			titre_popup_nouveau_contact.setContent('<h2 class="titre_liste">Nouveau Contact</h2>');
+			titre_popup_nouveau_contact.setContent('<h2 class="titre_liste">'+_("Nouveau Contact")+'</h2>');
 			
 			// Formulaire contact
 			var formulaire_nouveau_contact = content_nouveau_contact.newVerticalLayout();
@@ -64,14 +64,14 @@ o_liste_contacts.addCssClass("content_clients_listeContacts");
 			
 			var newContactForm = new GraphicalForm("/personnes/new");
 			
-			newContactForm.addInput("Nom","text","nom");
-			newContactForm.addInput("Prenom","text","prenom");
-			newContactForm.addInput("Statut","text","statut");
-			newContactForm.addInput("Tel.","text","tel");
-			newContactForm.addInput("Fax","text","fax");
-			newContactForm.addInput("Email","text","mail"); 
-			newContactForm.addInput("Commentaire","textarea","commentaire");
-			newContactForm.addInput("Ajouter","submit","ajouter");
+			newContactForm.addInput(_("Nom"),"text","nom");
+			newContactForm.addInput(_("Prenom"),"text","prenom");
+			newContactForm.addInput(_("Statut"),"text","statut");
+			newContactForm.addInput(_("Tel."),"text","tel");
+			newContactForm.addInput(_("Fax"),"text","fax");
+			newContactForm.addInput(_("Email"),"text","mail"); 
+			newContactForm.addInput(_("Commentaire"),"textarea","commentaire");
+			newContactForm.addInput(_("Ajouter"),"submit","ajouter");
 			
 			newContactForm.setPopupToHide(popup_nouveau_contact);
 			

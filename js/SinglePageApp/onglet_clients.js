@@ -25,9 +25,9 @@ clients_p.addCssClass("corps_clients");
 		nav_all_contacts.addCssClass("navigateur");
 		
 			// Ajout des onglets
-			var o_liste_entreprises = nav_all_contacts.addTab('ENTREPRISES');
+			var o_liste_entreprises = nav_all_contacts.addTab(_('ENTREPRISES'));
 			o_liste_entreprises.addTabCssClass("nom-item");
-			var o_liste_contacts = nav_all_contacts.addTab('CONTACTS');
+			var o_liste_contacts = nav_all_contacts.addTab(_('CONTACTS'));
 			o_liste_contacts.addTabCssClass("nom-item");
 		
 	
@@ -38,8 +38,8 @@ clients_p.addCssClass("corps_clients");
 		nav_all_contacts.getCoupler().setAsEndPoint();
 		nav_all_contacts.getCoupler().setExternalSource(null);
 		nav_all_contacts.getCoupler().updateHandler(function(informations){
-			if(informations==="CLIENTS"){
-				this.coupler.send("ENTREPRISES");
+			if(informations===_("CLIENTS")){
+				this.coupler.send(_("ENTREPRISES"));
 			}
 		});
 		
@@ -81,13 +81,13 @@ clients_p.addCssClass("corps_clients");
 		nav_clients.addCssClass("navigateur");
 		
 			// Ajout des onglets
-			var o_general = nav_clients.addTab("GENERAL");
+			var o_general = nav_clients.addTab(_("GENERAL"));
 			o_general.addTabCssClass("nom-item");
-			var o_contacts = nav_clients.addTab("CONTACTS");
+			var o_contacts = nav_clients.addTab(_("CONTACTS"));
 			o_contacts.addTabCssClass("nom-item");
-			var o_coordonnees = nav_clients.addTab("COORDONNEES");
+			var o_coordonnees = nav_clients.addTab(_("COORDONNEES"));
 			o_coordonnees.addTabCssClass("nom-item");
-			var o_personnes = nav_clients.addTab("PERSONNE");
+			var o_personnes = nav_clients.addTab(_("PERSONNE"));
 			o_personnes.addTabCssClass("nom-item");
 		
 		// Ajout du navigateur Clients au content nav clients
@@ -100,19 +100,19 @@ clients_p.addCssClass("corps_clients");
 		nav_clients.getCoupler().setAsEndPoint();
 		nav_clients.getCoupler().updateHandler(function(informations){
 		
-			var general = GraphicalNavigator.getNavigatorAndItemID("nav_clients","GENERAL");
-			var contacts = GraphicalNavigator.getNavigatorAndItemID("nav_clients","CONTACTS");
-			var coordonnees = GraphicalNavigator.getNavigatorAndItemID("nav_clients","COORDONNEES");
-			var personne = GraphicalNavigator.getNavigatorAndItemID("nav_clients","PERSONNE");
+			var general = GraphicalNavigator.getNavigatorAndItemID("nav_clients",_("GENERAL"));
+			var contacts = GraphicalNavigator.getNavigatorAndItemID("nav_clients",_("CONTACTS"));
+			var coordonnees = GraphicalNavigator.getNavigatorAndItemID("nav_clients",_("COORDONNEES"));
+			var personne = GraphicalNavigator.getNavigatorAndItemID("nav_clients",_("PERSONNE"));
 			
-			if(informations === "CONTACTS"){
+			if(informations === _("CONTACTS")){
 				GraphicalNavigator.hide(general.NavId,general.ItemID);
 				GraphicalNavigator.hide(contacts.NavId,contacts.ItemID);
 				GraphicalNavigator.hide(coordonnees.NavId,coordonnees.ItemID);
 				GraphicalNavigator.show(personne.NavId,personne.ItemID);
 				GraphicalNavigator.setSelectedTab(personne.NavId,personne.ItemID);
 			}
-			else if(informations === "ENTREPRISES"){
+			else if(informations === _("ENTREPRISES")){
 				GraphicalNavigator.show(general.NavId,general.ItemID);
 				GraphicalNavigator.show(contacts.NavId,contacts.ItemID);
 				GraphicalNavigator.show(coordonnees.NavId,coordonnees.ItemID);

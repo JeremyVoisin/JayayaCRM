@@ -1,188 +1,170 @@
-{
-	"newGalery" 							: "New gallery",
+{	
+	"CLIENTS"										: "CUSTOMERS",
 	
-	"newGaleryPopupTitle"					: "Add a new gallery",
+	"TACHES"										: "TASKS",
 	
-	"newImage" 								: "New picture",
+	"CONVERSATIONS"									: "CONVERSATIONS",
 	
-	"deleteImage" 							: "Delete picture",
+	"PARAMETRES"									: "SETTINGS",
 	
-	"addImage" 								: "Add a new picture",
+	"ENTREPRISES"									: "COMPANIES",
 	
-	"news" 									: "News",
+	"CONTACTS"										: "CONTACTS",
 	
-	"keyWords" 								: "Keywords",
-		
-	"gallery" 								: "Galleries",
+	"GENERAL"										: "GENERAL",
 	
-	"informations" 							: "Informations",
+	"COORDONNEES"									: "INFORMATIONS",
 	
-	"images" 								: "Pictures",
+	"Nouvelle Entreprise"							: "New company",
 	
-	"videos" 								: "Videos",
+	"Ajouter un centre d'intérêt"					: "Add a point of interest",
 	
-	"sounds" 								: "Sounds",
+	"Nouveau commentaire"							: "New comment",
 	
-	"confirm" 								: "Confirm",
+	"Commentaires"									: "Comments",
 	
-	"cancel" 								: "Cancel",
+	"Concerné par"									: "Concerned by",
 	
-	"visits" 								: "Visits",
+	"Êtes-vous sûr de vouloir cloturer la tâche ?"	: "Do you really want to close this task?",
 	
-	"yes" 									: "Yes",
+	"Rechercher"									: "Search",
 	
-	"no" 									: "No",
+	"Liste des contacts"							: "Contacts list",
 	
-	"deleteImage?" 							: "Are you sure?",
+	"Supprimer contact"								: "Delete contact",
 	
-	"image" 								: "Image",
+	"Nouveau contact"								: "New contact",
 	
-	"description" 							: "Description",
+	"contact"										: "contact",
 	
-	"galleryName" 							: "Gallery name",
+	"Siren"											: "DNI",
 	
-	"edit" 									: "Edit",
+	"Code Postal"									: "Postal Code",
 	
-	"deleteGallery" 						: "Delete gallery",
+	"Ville"											: "City",
 	
-	"deleteGaleryPopupTitle" 				: "Delete gallery",
+	"Pays"											: "Country",
 	
-	"keyWordText" 							: "Keyword title",
+	"Email"											: "Email",
 	
-	"addKeyWord" 							: "Add keyword",
+	"Tel"											: "Phone",
 	
-	"newKeyWordPopupTitle"					: "New keyword",
+	"Editer"										: "Edit",
 	
-	"deleteKeyword"							: "Delete keyword",
+	"Fax"											: "Fax",
 	
-	"deleteKeyWordPopupTitle" 				: "Delete keyword ?",
+	"Site web"										: "Web site",
 	
-	"previewAndChoice" 						: "Gallery preview and choice for the selected keyword",
+	"Commentaire"									: "Comment",
 	
-	"validateChanges"						: "Validate changes",
+	"Supprimer l'entreprise"						: "Delete company",
 	
-	"validateKeyWordPopupTitle"				: "Validate changes ?",
+	"Nom"											: "Last name",
 	
-	"documentTitle"							: "News edition",
+	"Prénom"										: "First name",
 	
-	"toolboxTitle"							: "Toolbox",
+	"Statut"										: "Role",
 	
-	"addText"								: "Add text at the end of the article",
+	"Mail"											: "Email",
 	
-	"addImage2"								: "Add picture at the end of the article",
+	"Supprimer la personne"							: "Delete contact",
 	
-	"title"									: "Title",
+	"Nouveau Contact"								: "New contact",
 	
-	"date"									: "Date",
+	"En retard"										: "Late",
 	
-	"place"									: "Place",
+	"Aujourd'hui"									: "Today",
 	
-	"insertTextAfter"						: "Insert text after selected item",
+	"A venir"										: "Future",
 	
-	"insertImageAfter"						: "Insert picture after selected item",
+	"SELECTIONNER UNE TACHE"						: "SELECT A TASK",
 	
-	"deleteItem"							: "Delete selected item",
+	"Nouvelle tâche"								: "New task",
 	
-	"saveChanges"							: "Save changes",
+	"Cloturer"										: "Close",
 	
-	"deleteNews"							: "Delete article",
+	"à"												: "at",
 	
-	"newTextHere"							: "New text here",
+	"Le"											: "The",
 	
-	"NoNewsSelectedError"					: "Error, no news selected",
+	"Titre"											: "Title",
 	
-	"NoItemSelectedError"					: "Error, no item selected",
+	"Lieu"											: "Location",
 	
-	"addNews"								: "New article",
+	"Date"											: "Date",
 	
-	"summary"								: "Summary",
+	"Heure"											: "Hour",
 	
-	"gallerycp"								: "Waypoint gallery",
+	"Description"									: "Description",
 	
-	"position"								: "Place",
+	"TOUTES"										: "ALL",
 	
-	"waypoints"								: "Waypoints",
+	"MES CONVERSATIONS"								: "MY CONVERSATIONS",
 	
-	"general"								: "General",
+	"commentaires"									: "comments",
 	
-	"latitude"								: "Latitude",
+	"Nouvelle conversation"							: "New conversation",
 	
-	"longitude"								: "Longitude",
+	"Fermer la conversation"						: "Close conversation",
 	
-	"associatedGalleryName"					: "Associated gallery name",
+	"Répondre"										: "Answer",
 	
-	"descriptive"							: "Descriptive",
+	"Participants"									: "Participants",
 	
-	"descriptiveTitle"						: "Descriptive title",
+	"Sujet"											: "Subject",
 	
-	"visitName"								: "Visit name",
+	"Utilisateurs"									: "Users",
 	
-	"visitedTown"							: "Visited town",
+	"Nom"											: "Name",
 	
-	"waypointsNumber"						: "Waypoints number",
+	"Email"											: "Email",
 	
-	"newVisitPopupTitle"					: "Add visit",
+	"Téléphone"										: "Phone",
 	
-	"newVisit"								: "New visit",
+	"Oui"											: "Yes",
 	
-	"visitName"								: "Visit name",
+	"Non"											: "No",
 	
-	"visitTown"								: "Visit town",
+	"Centres d'interet"								: "Points of interest",
 	
-	"comment"								: "Comments",
+	"Nouvel utilisateur"							: "New user",
 	
-	"submissions"							: "Submissions",
+	"Nouveau centre d'intérêt"						: "New point of interest",
 	
-	"deleteVisite?"							: "Delete visit?",
+	"Couleur"										: "Color",
 	
-	"delVisite"								: "Remove visit",
+	"Prenom"										: "First name",
 	
-	"deleteWaypoint?"						: "Delete waypoint ?",
+	"Telephone"										: "Phone",
 	
-	"delWaypoint"							: "Delete waypoint",
+	"Mot de passe"									: "Password",
 	
-	"submissionPreview"						: "Submission preview",
+	"Utilisateur"									: "User",
 	
-	"addWaypoint"							: "Add waypoint",
+	"Client"										: "Customer",
 	
-	"insertWaypoint"						: "Insert waypoint",
+	"Ajouter"										: "Add",
 	
-	"waypointType"							: "Waypoint type ?",
+	"Modifier"										: "Edit",
 	
-	"waypointReal"							: "Classical",
+	"Supprimer"										: "Delete",
 	
-	"waypointFake"							: "Virtual",
+	"Êtes-vous sûr de vouloir fermer la conversation ?" : "Do you really want to close this conversation ?",
 	
-	"approve"								: "Approve",
+	"Numero de voie"								: "Street number",
 	
-	"disapprove"							: "Disapprove",
+	"Nom de la voie"								: "Street name",
 	
-	"quality"								: "Quality",
+	"Type de voie"									: "Street type",
 	
-	"addNewSound"							: "Add new sound",
+	"Êtes-vous sûr de vouloir supprimer l'entreprise ?" : "Do you really want to delete this company ?",
 	
-	"addSound"								: "Add sound",
+	"Êtes-vous sûr de vouloir supprimer la personne ?" : "Do you really want to delete this contact ?",
 	
-	"sound"									: "Sound file",
+	"Tel."											: "Phone",
 	
-	"video"									: "Video",
+	"Connexion"										: "Connection",
 	
-	"addVideo"								: "Add video",
-	
-	"addNewVideo"							: "New video",
-	
-	"delVideo"								: "Delete video",
-	
-	"deleteVideo?"							: "Delete the video?",
-	
-	"delSound"								: "Delete sound",
-	
-	"deleteSound?"							: "Really delete sound?",
-	
-	"addArticle"							: "Add a new article",
-	
-	"editImagePopup"						: "Edit an image description",
-	
-	"editImage"								: "Edit"
+	"Identifiant"									: "Login"
 	
 }

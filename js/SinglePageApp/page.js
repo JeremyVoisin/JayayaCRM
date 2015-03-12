@@ -33,10 +33,10 @@ Layout.setHeight(100);
 		logo.addTabCssClass("logo_app");
 
 		// Ajout des onglets
-		if(rank<=1){var clients_p = nav_p.addTab('CLIENTS');clients_p.addTabCssClass('nom-item');}
-		if(rank<=1){var taches_p = nav_p.addTab('TACHES');taches_p.addTabCssClass('nom-item');}
-		if(rank<=2){var conversations_p = nav_p.addTab('CONVERSATIONS');conversations_p.addTabCssClass('nom-item');}
-		if(rank===0){var parametres_p = nav_p.addTab('PARAMETRES');parametres_p.addTabCssClass('nom-item');}
+		if(rank<=1){var clients_p = nav_p.addTab(_("CLIENTS"));clients_p.addTabCssClass('nom-item');}
+		if(rank<=1){var taches_p = nav_p.addTab(_("TACHES"));taches_p.addTabCssClass('nom-item');}
+		if(rank<=2){var conversations_p = nav_p.addTab(_("CONVERSATIONS"));conversations_p.addTabCssClass('nom-item');}
+		if(rank===0){var parametres_p = nav_p.addTab(_("PARAMETRES"));parametres_p.addTabCssClass('nom-item');}
 		
 		// Utilisateur
 		DatasBuffer.update("/login/who");
@@ -63,5 +63,5 @@ Layout.setHeight(100);
 // Mise en place du Layout
 Layout.generateHTML();
 GraphicalList.select(1,0);
-var p = GraphicalNavigator.getNavigatorAndItemID("nav_clients","PERSONNE");
+var p = GraphicalNavigator.getNavigatorAndItemID("nav_clients",_("PERSONNE"));
 GraphicalNavigator.hide(p.NavId,p.ItemID);

@@ -23,7 +23,7 @@ o_general.addCssClass("content_clients_general");
 			// Titre content concernes par
 			var titre_concern = content_concern.newVerticalLayout();
 			titre_concern.setHeight(1);
-			titre_concern.setContent('<h2 class="titre_liste">Concernes par</h2>');
+			titre_concern.setContent('<h2 class="titre_liste">'+_("Concerné par")+'</h2>');
 			
 			// Liste des activites concernees
 			var content_liste_concern = content_concern.newVerticalLayout();
@@ -39,7 +39,7 @@ o_general.addCssClass("content_clients_general");
 					for(var j = 0;j < list_id_domaine.length; j++){
 						var domaine_info = DatasBuffer.getRequest("/domaines/"+list_id_domaine[j]);
 						if(domaine_info[0])
-							liste_concern.addItem('<canvas class="rect_type" width="10" height="10" style="background-color:'+domaine_info[0].couleur+';"></canvas>'+domaine_info[0].nom+' <input class="btn_sup" type="button" value="Supprimer" onClick="sup_domaine_entreprise(\''+domaine_info[0]._id+'\')" />',domaine_info[0].nom);
+							liste_concern.addItem('<canvas class="rect_type" width="10" height="10" style="background-color:'+domaine_info[0].couleur+';"></canvas>'+domaine_info[0].nom+' <input class="btn_sup" type="button" value="'+("Supprimer")+'" onClick="sup_domaine_entreprise(\''+domaine_info[0]._id+'\')" />',domaine_info[0].nom);
 					}
 				}
 			});
@@ -58,7 +58,7 @@ o_general.addCssClass("content_clients_general");
 			var titre_com = content_com.newVerticalLayout();
 			titre_com.addCssClass("titre_com");
 			titre_com.setHeight(1);
-			titre_com.setContent('<h2 class="titre_liste">Commentaires</h2>');
+			titre_com.setContent('<h2 class="titre_liste">'+_("Commentaires")+'</h2>');
 			
 			// Liste des commentaires
 			var content_liste_com = content_com.newVerticalLayout();
@@ -77,7 +77,7 @@ o_general.addCssClass("content_clients_general");
 						if(personne[0])
 							liste_com.addItem('<p class="pseudo_com">'+personne[0].nom+' '+personne[0].prenom+'</p><p class="heure_com">à '+getFormatHeure(d)+'</p><p class="date_com">Le '+getFormatDate(d)+'</p><p class="msg_com">'+datas[i].corps+'</p>');
 						else
-							liste_com.addItem('<p class="pseudo_com">Utilisateur supprimé</p><p class="heure_com">à '+getFormatHeure(d)+'</p><p class="date_com">Le '+getFormatDate(d)+'</p><p class="msg_com">'+datas[i].corps+'</p>');
+							liste_com.addItem('<p class="pseudo_com">'+_("Utilisateur supprimé")+'</p><p class="heure_com">à '+getFormatHeure(d)+'</p><p class="date_com">Le '+getFormatDate(d)+'</p><p class="msg_com">'+datas[i].corps+'</p>');
 					}
 				}
 			});
@@ -92,8 +92,8 @@ o_general.addCssClass("content_clients_general");
 	options_general.addCssClass("content_options_general");
 	options_general.setHeight(1);
 	options_general.setContent('<ul>'+
-									'<li id="nouveau_ci" class="bouton_option showPopup" popup="popupAjoutCentreInteret"><a href="javascript:void(0);">Ajouter un centre d\'intérêt</a></li>'+
-									'<li id="nouveau_com" class="bouton_option showPopup" popup="popupAjoutComGeneral"><a href="javascript:void(0);">Nouveau commentaire</a></li>'+
+									'<li id="nouveau_ci" class="bouton_option showPopup" popup="popupAjoutCentreInteret"><a href="javascript:void(0);">'+_("Ajouter un centre d'intérêt")+'</a></li>'+
+									'<li id="nouveau_com" class="bouton_option showPopup" popup="popupAjoutComGeneral"><a href="javascript:void(0);">'+_("Nouveau commentaire")+'</a></li>'+
 									'</ul>');
 									
 
@@ -114,7 +114,7 @@ o_general.addCssClass("content_clients_general");
 				var titre_popup_nouveau_domaine = content_ajout_domaine.newVerticalLayout();
 				titre_popup_nouveau_domaine.addCssClass("titre_popup_nouveau_domaine");
 				titre_popup_nouveau_domaine.setHeight(1);
-				titre_popup_nouveau_domaine.setContent('<h2 class="titre_liste">Ajouter un centre d\'interet</h2>');
+				titre_popup_nouveau_domaine.setContent('<h2 class="titre_liste">'+_("Ajouter un centre d'intérêt")+'</h2>');
 				
 				var content_liste_domaines = content_ajout_domaine.newVerticalLayout();
 				content_liste_domaines.addCssClass("content_liste_domaines");
@@ -155,7 +155,7 @@ o_general.addCssClass("content_clients_general");
 				var titre_popup_nouveau_com = content_ajout_com_general.newVerticalLayout();
 				titre_popup_nouveau_com.addCssClass("titre_popup_nouveau_com");
 				titre_popup_nouveau_com.setHeight(1);
-				titre_popup_nouveau_com.setContent('<h2 class="titre_liste">Nouveau commentaire</h2>');
+				titre_popup_nouveau_com.setContent('<h2 class="titre_liste">'+_("Nouveau commentaire")+'</h2>');
 				
 				var content_commentaire = content_ajout_com_general.newVerticalLayout();
 				content_commentaire.addCssClass("content_commentaire");
@@ -167,9 +167,9 @@ o_general.addCssClass("content_clients_general");
 				// Champs commentaire
 				var commForm = new GraphicalForm("/entreprises/notes/new");
 				
-				commForm.addInput("Commentaire","textarea","corps");
+				commForm.addInput(_("Commentaire"),"textarea","corps");
 				commForm.addInput("idS","externalInformation","idS");
-				commForm.addInput("Ajouter","submit","ajouter");
+				commForm.addInput(_("Ajouter"),"submit","ajouter");
 								
 				commForm.setPopupToHide(popup_nouveau_com);
 			

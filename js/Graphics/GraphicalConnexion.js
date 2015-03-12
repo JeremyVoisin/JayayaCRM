@@ -228,10 +228,10 @@ function GraphicalConnexion(){
 			returnStuff += '<div id="popup_block_connexion">';
 			returnStuff += '<img src="img/hight_logo.png" alt="logo"/>';
 			returnStuff += '<div id="bloc_connexion" onkeypress="if(event.keyCode===13)GraphicalConnexion.connect();">';
-			returnStuff += '<h2 class="champs_co">CONNEXION</h2>';
-			returnStuff += '<p class="champs_co"><input type="text" id="logInput" placeholder="Identifiant" name="identifiant"/></p>';
-			returnStuff += '<p class="champs_co"><input type="password" id="passInput" placeholder="Mot de passe" name="mdp"/></p>';
-			returnStuff += '<p class="champs_co"><input type="button" id="btn_co" value="Connexion" onClick="GraphicalConnexion.connect();"/><img id="img_co_load" style="display:none;" src="img/load.gif" alt="loading" /></p>';
+			returnStuff += '<h2 class="champs_co">'+_("Connexion")+'</h2>';
+			returnStuff += '<p class="champs_co"><input type="text" id="logInput" placeholder="'+_("Identifiant")+'" name="identifiant"/></p>';
+			returnStuff += '<p class="champs_co"><input type="password" id="passInput" placeholder="'+_("Mot de passe")+'" name="mdp"/></p>';
+			returnStuff += '<p class="champs_co"><input type="button" id="btn_co" value="'+_("Connexion")+'" onClick="GraphicalConnexion.connect();"/><img id="img_co_load" style="display:none;" src="img/load.gif" alt="loading" /></p>';
 			returnStuff += '</div>';
 			returnStuff += '<p id="msg_erreur_co"></p>';
 			returnStuff += '</div></div>';
