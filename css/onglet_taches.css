@@ -1,0 +1,236 @@
+/**
+ * @Project: JAYAYA CRM
+ * @Author: Equipe JAYAYA
+ * @Description: Feuille de style de l'onglet principal Taches
+ * @version: 1.0
+ */
+
+
+ 
+/* Style commun aux 3 listes
+   ========================================================================== */
+
+.partieH_onglet_taches ul {	
+	border-top: none;
+}
+.partieH_onglet_taches ul li p {	
+	padding: 5px;
+}
+.partieH_onglet_taches ul li .nom_tache {
+	float: left;
+	font-weight: bold;
+}
+.partieH_onglet_taches ul li .date_tache {	
+	float: right;
+	color: #888888;
+}
+.partieH_onglet_taches ul li .heure_tache {	
+	float: right;
+	color: #888888;
+}
+.partieH_onglet_taches ul li .desc_tache {	
+	clear: both;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	width:200px;
+}
+
+
+
+/* Liste Taches en retard
+   ========================================================================== */
+
+.partieH_onglet_taches .taches_before {
+	padding: 10px;
+}
+.taches_before .titre_taches_before h2 {
+	background: #FFC9C9;
+	color: #FF0000;
+	border-bottom: 1px solid #FF0000;
+}
+/* Style de la liste */
+.taches_before .liste_taches_before li {	
+	border-bottom: 1px dashed #FF0000;
+}
+.taches_before .liste_taches_before li:hover {	
+	background: #FFC9C9;
+}
+.taches_before .liste_taches_before li.active_item {	
+	background: #FFC9C9;
+	border-left: 5px solid #FF0000;
+}
+.taches_before .liste_taches_before li .nom_tache {
+	color: #FF0000;
+}
+
+
+
+/* Liste Taches du jour
+   ========================================================================== */
+   
+.partieH_onglet_taches .taches_now {
+	padding: 10px 0px;
+}
+.taches_now .titre_taches_now h2 {
+	background: #c8f2ff;
+	color: #4AB1D3;
+	border-bottom: 1px solid #4AB1D3;
+}
+/* Style de la liste */
+.taches_now .liste_taches_now li {	
+	border-bottom: 1px dashed #4AB1D3;
+}
+.taches_now .liste_taches_now li:hover {	
+	background: #c8f2ff;
+}
+.taches_now .liste_taches_now li.active_item {	
+	background: #c8f2ff;
+	border-left: 5px solid #4AB1D3;
+}
+.taches_now .liste_taches_now li .nom_tache {
+	color: #4AB1D3;
+}
+
+
+
+/* Liste Taches a venir
+   ========================================================================== */
+   
+.partieH_onglet_taches .taches_after {
+	padding: 10px;
+}
+.taches_after .titre_taches_after h2 {
+	background: #b6ffb5;
+	color: #008500;
+	border-bottom: 1px solid #008500;
+}
+/* Style de la liste */
+.taches_after .liste_taches_after li {	
+	border-bottom: 1px dashed #008500;
+}
+.taches_after .liste_taches_after li:hover {	
+	background: #b6ffb5;
+}
+.taches_after .liste_taches_after li.active_item {	
+	background: #b6ffb5;
+	border-left: 5px solid #008500;
+}
+.taches_after .liste_taches_after li .nom_tache {
+	color: #008500;
+}
+
+
+
+/* Partie du Bas
+   ========================================================================== */
+   
+.partieB_onglet_taches .titre_tache_select {
+	padding: 0px 10px;
+}
+.partieB_onglet_taches .titre_tache_select h2 {
+	color: #4AB1D3;
+	background: #EEEEEE;
+}
+
+/* Style de la liste infos tache */
+.partieB_onglet_taches .liste_infos_tache {
+	border: none;
+	border-right: 1px solid #E0E0E0;
+}
+.partieB_onglet_taches .liste_infos_tache li {
+	cursor: default;
+}
+.partieB_onglet_taches .liste_infos_tache li.active_item {
+	border-left: none;
+}
+.partieB_onglet_taches .liste_infos_tache .gras_champs_contact{
+	font-weight: bold;
+	color: #4AB1D3;
+}
+
+/* Style description */
+.partieB_onglet_taches .desc_tache_select {
+	padding: 10px;
+	min-height: 200px;
+}
+.partieB_onglet_taches .desc_tache_select .gras_champs_contact {
+	font-weight: bold;
+	color: #4AB1D3;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.partieB_onglet_taches .desc_tache_select textarea {
+	width: 100%;
+	height: 100px;
+}
+
+/* Style du popup cloturer une tache */
+.partieB_onglet_taches .popup_clo_tache .msg_conf_clo_tache p {
+	text-align: center;
+}
+.partieB_onglet_taches .popup_clo_tache .titre_popup_clo_tache {
+	margin-bottom: 10px;
+}
+.partieB_onglet_taches .popup_clo_tache .btns_popup_clo_tache {
+	margin: 0px 10px 10px 0px;
+}
+.partieB_onglet_taches .popup_clo_tache .btns_popup_clo_tache p {
+	text-align: center;
+}
+.partieB_onglet_taches .popup_clo_tache .btns_popup_clo_tache input {
+	margin: 10px 10px 0px 0px;
+}
+
+
+/* Partie boutons options
+   ========================================================================== */
+   
+/* Style du Bloc Options */
+.content_options_taches {
+	border-top: 1px solid #E0E0E0;
+}
+.content_options_taches ul {
+	margin: 10px;
+}
+.content_options_taches #ajouter_tache {
+	background:url('../img/plus.png') 0% 50% no-repeat no-repeat;
+}
+
+/* Style du Popup nouvelle tache */
+.popupAjoutTache .titre_popup_nouvelle_tache {
+	margin-bottom: 10px;
+}
+.popupAjoutTache .formulaire_nouvelle_tache {
+	padding: 0px 10px;
+}
+.popupAjoutTache table th{
+	vertical-align: top;
+	text-align: right;
+	font-weight: bold;
+	color: #4AB1D3;
+	padding: 2px 0px 2px 0px;
+}
+.popupAjoutTache table td{
+	padding: 2px 0px 2px 0px;
+}
+.popupAjoutTache table .middle_form {
+	padding: 0px 10px 0px 10px;
+	vertical-align: top;
+}
+.popupAjoutTache table .val_form {
+	width: 100%;
+}
+.popupAjoutTache table .val_form input{
+	width: 100%;
+}
+.popupAjoutTache table .val_form textarea{
+	width: 100%;
+	height: 100px;
+}
+.popupAjoutTache .btns_popup_nouvelle_tache {
+	margin: 0px 10px 10px 0px;
+}
+.popupAjoutTache .btns_popup_nouvelle_tache input {
+	margin: 10px 0px 10px 0px;
+}

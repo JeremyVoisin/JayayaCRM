@@ -1,0 +1,170 @@
+{	
+	"CLIENTS"										: "CUSTOMERS",
+	
+	"TACHES"										: "TASKS",
+	
+	"CONVERSATIONS"									: "CONVERSATIONS",
+	
+	"PARAMETRES"									: "SETTINGS",
+	
+	"ENTREPRISES"									: "COMPANIES",
+	
+	"CONTACTS"										: "CONTACTS",
+	
+	"GENERAL"										: "GENERAL",
+	
+	"COORDONNEES"									: "INFORMATIONS",
+	
+	"Nouvelle Entreprise"							: "New company",
+	
+	"Ajouter un centre d'intérêt"					: "Add a point of interest",
+	
+	"Nouveau commentaire"							: "New comment",
+	
+	"Commentaires"									: "Comments",
+	
+	"Concerné par"									: "Concerned by",
+	
+	"Êtes-vous sûr de vouloir cloturer la tâche ?"	: "Do you really want to close this task?",
+	
+	"Rechercher"									: "Search",
+	
+	"Liste des contacts"							: "Contacts list",
+	
+	"Supprimer contact"								: "Delete contact",
+	
+	"Nouveau contact"								: "New contact",
+	
+	"contact"										: "contact",
+	
+	"Siren"											: "DNI",
+	
+	"Code Postal"									: "Postal Code",
+	
+	"Ville"											: "City",
+	
+	"Pays"											: "Country",
+	
+	"Email"											: "Email",
+	
+	"Tel"											: "Phone",
+	
+	"Editer"										: "Edit",
+	
+	"Fax"											: "Fax",
+	
+	"Site web"										: "Web site",
+	
+	"Commentaire"									: "Comment",
+	
+	"Supprimer l'entreprise"						: "Delete company",
+	
+	"Nom"											: "Last name",
+	
+	"Prénom"										: "First name",
+	
+	"Statut"										: "Role",
+	
+	"Mail"											: "Email",
+	
+	"Supprimer la personne"							: "Delete contact",
+	
+	"Nouveau Contact"								: "New contact",
+	
+	"En retard"										: "Late",
+	
+	"Aujourd'hui"									: "Today",
+	
+	"A venir"										: "Future",
+	
+	"SELECTIONNER UNE TACHE"						: "SELECT A TASK",
+	
+	"Nouvelle tâche"								: "New task",
+	
+	"Cloturer"										: "Close",
+	
+	"à"												: "at",
+	
+	"Le"											: "The",
+	
+	"Titre"											: "Title",
+	
+	"Lieu"											: "Location",
+	
+	"Date"											: "Date",
+	
+	"Heure"											: "Hour",
+	
+	"Description"									: "Description",
+	
+	"TOUTES"										: "ALL",
+	
+	"MES CONVERSATIONS"								: "MY CONVERSATIONS",
+	
+	"commentaires"									: "comments",
+	
+	"Nouvelle conversation"							: "New conversation",
+	
+	"Fermer la conversation"						: "Close conversation",
+	
+	"Répondre"										: "Answer",
+	
+	"Participants"									: "Participants",
+	
+	"Sujet"											: "Subject",
+	
+	"Utilisateurs"									: "Users",
+	
+	"Nom"											: "Name",
+	
+	"Email"											: "Email",
+	
+	"Téléphone"										: "Phone",
+	
+	"Oui"											: "Yes",
+	
+	"Non"											: "No",
+	
+	"Centres d'interet"								: "Points of interest",
+	
+	"Nouvel utilisateur"							: "New user",
+	
+	"Nouveau centre d'intérêt"						: "New point of interest",
+	
+	"Couleur"										: "Color",
+	
+	"Prenom"										: "First name",
+	
+	"Telephone"										: "Phone",
+	
+	"Mot de passe"									: "Password",
+	
+	"Utilisateur"									: "User",
+	
+	"Client"										: "Customer",
+	
+	"Ajouter"										: "Add",
+	
+	"Modifier"										: "Edit",
+	
+	"Supprimer"										: "Delete",
+	
+	"Êtes-vous sûr de vouloir fermer la conversation ?" : "Do you really want to close this conversation ?",
+	
+	"Numero de voie"								: "Street number",
+	
+	"Nom de la voie"								: "Street name",
+	
+	"Type de voie"									: "Street type",
+	
+	"Êtes-vous sûr de vouloir supprimer l'entreprise ?" : "Do you really want to delete this company ?",
+	
+	"Êtes-vous sûr de vouloir supprimer la personne ?" : "Do you really want to delete this contact ?",
+	
+	"Tel."											: "Phone",
+	
+	"Connexion"										: "Connection",
+	
+	"Identifiant"									: "Login"
+	
+}

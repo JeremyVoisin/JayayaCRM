@@ -1,0 +1,59 @@
+/**
+ * @Project: JAYAYA CRM
+ * @Author: Equipe JAYAYA
+ * @Description: Feuille de style de sous onglet Personne de l'onglet principal Clients
+ * @version: 1.0
+ */
+ 
+
+ 
+/* Style de la liste
+   ========================================================================== */
+   
+.content_liste_pers_contacts .liste_pers_contacts li {
+	cursor: default;
+}
+.content_liste_pers_contacts .liste_pers_contacts li.active_item {
+	border-left: none;
+}
+.content_liste_pers_contacts .liste_pers_contacts li .gras_champs_contact {
+	font-weight: bold;
+	color: #4AB1D3;
+}
+
+
+
+/* Bloc Boutons Options
+   ========================================================================== */
+   
+.content_clients_personnees .content_options_clients_personne {
+	border-top: 1px solid #E0E0E0;
+	margin-top: 10px;
+}
+.content_clients_personnees .content_options_clients_personne ul {
+	margin: 10px;
+}
+.content_clients_personnees .content_options_clients_personne #sup_personne {
+	background:url('../img/sup.png') 0% 50% no-repeat no-repeat;
+}
+
+
+
+/* Popup supprimer personne
+   ========================================================================== */
+   
+.content_clients_personnees .popupSupPersonne .msg_conf_sup_personne p {
+	text-align: center;
+}
+.content_clients_personnees .popupSupPersonne .titre_popup_sup_personne {
+	margin-bottom: 10px;
+}
+.content_clients_personnees .popupSupPersonne .btns_popup_sup_personne {
+	margin: 0px 10px 10px 0px;
+}
+.content_clients_personnees .popupSupPersonne .btns_popup_sup_personne p {
+	text-align: center;
+}
+.content_clients_personnees .popupSupPersonne .btns_popup_sup_personne input {
+	margin: 10px 10px 0px 0px;
+}
