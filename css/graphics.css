@@ -113,4 +113,75 @@
 .graphicalEI .current_value_btn {
 	float: right;
 }
+.graphicalEI textarea {
+	width:98%;
+}
 
+.graphicalEIContainer .active_item{
+	color:black;
+	background-color:white;
+}
+
+.graphicalEIContainer .GraphicalListItem:hover{
+	color:black;
+	cursor:default;
+	text-shadow: none;
+	background-color:white;
+}
+
+.PopupButtonBelt{
+	width:96%;
+}
+
+.PopupButtonBelt input{
+	display:inline-block;
+	background-color:#EEE;
+	color:#555;
+	border-radius: 10px;
+	border:none;
+	cursor:pointer;
+	height:80%;
+	margin-top:4%;
+	margin-bottom:2%;
+	width:45%;
+	margin-right:2.5%;
+	margin-left:2.5%;
+	font-weight:bold;
+	font-size:0.8em;
+}
+
+.PopupButtonBelt input:hover{
+	display:inline-block;
+	background-color:#EEE;
+	border-radius: 10px;
+	border:none;
+	cursor:pointer;
+	height:80%;
+	margin-top:4%;
+	margin-bottom:2%;
+	width:45%;
+	margin-right:2.5%;
+	margin-left:2.5%;
+	font-weight:bold;
+	font-size:0.8em;
+}
+
+.PopupButtonBelt input:active{
+	display:inline-block;
+	background-color:#EEE;
+	border-radius: 10px;
+	border:none;
+	cursor:pointer;
+	height:80%;
+	margin-top:4%;
+	margin-bottom:2%;
+	width:45%;
+	margin-right:2.5%;
+	margin-left:2.5%;
+	font-weight:bold;
+	font-size:0.8em;
+}
+
+.PopupButtonBelt .middle_form{
+	padding:0;
+}
