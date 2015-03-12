@@ -1,0 +1,86 @@
+/**
+ * @Project: JAYAYA CRM
+ * @Author: Equipe JAYAYA
+ * @Description: Feuille de style definissant le style de l'onglet taches de l'onglet principal Clients
+ * @version: 1.0
+ */
+
+
+ 
+/* Liste Des Taches
+   ========================================================================== */
+
+.content_clients_taches .content_liste_taches {
+	padding: 10px 10px 10px 0px;
+}
+/* Style de la liste */
+.content_clients_taches .content_liste_taches li {
+	border-bottom: none;
+}
+.content_clients_taches .content_liste_taches li .date_tache {
+	border-bottom: 1px solid #E0E0E0;
+	margin-bottom: 5px;
+	padding-bottom: 2px;
+	color: #4AB1D3;
+	font-weight: bold;
+}
+.content_clients_taches .content_liste_taches li .heure_tache {
+	font-weight: bold;
+	float: left;
+	width: 20%;
+	margin-top: 5px;
+}
+.content_clients_taches .content_liste_taches li .text_tache {
+	display: inline-block;
+	width: 80%;
+	margin-top: 5px;
+}
+
+
+
+/* Details tache
+   ========================================================================== */
+
+.content_clients_taches .content_details_tache {
+	padding: 10px 0px;
+}
+.content_clients_taches .content_details_tache li {
+	cursor: default;
+}
+.content_clients_taches .content_details_tache li:active {	
+	border-left: none;
+}
+.content_clients_taches .content_details_tache li p {
+	margin: 5px;
+}
+.content_clients_taches .content_details_tache li #nom_tache {
+	text-align: center;
+	color: #888888;
+	font-weight: bold;
+	font-size: 20px;
+}
+.content_clients_taches .content_details_tache .gras_champs_tache {
+	font-weight: bold;
+	color: #4AB1D3;
+}
+
+
+
+/* Bloc Boutons Options
+   ========================================================================== */
+
+.content_clients_taches .content_options_taches {
+	border-top: 1px solid #E0E0E0;
+}
+.content_clients_taches .content_options_taches ul {
+	margin: 10px;
+}
+.content_clients_taches .content_options_taches #nouvelle_tache {
+	background:url('../img/plus.png') 0% 50% no-repeat no-repeat;
+}
+.content_clients_taches .content_options_taches #modifier_tache {
+	background:url('../img/modif.png') 0% 50% no-repeat no-repeat;
+}
+.content_clients_taches .content_options_taches #supprimer_tache {
+	background:url('../img/sup.png') 0% 50% no-repeat no-repeat;
+}
