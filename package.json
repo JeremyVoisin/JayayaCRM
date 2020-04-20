@@ -12,6 +12,6 @@
     "socket.io": "~1.2.0",
     "superagent": "~0.21.0",
     "dicer": "~0.2.3",
-    "express-session": "~1.9.1"
+    "express-session": "~1.17.1"
   }
 }
